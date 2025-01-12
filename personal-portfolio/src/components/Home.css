@@ -1,0 +1,70 @@
+/* Flexbox layout for header */
+header {
+    display: flex;
+    align-items: center; /* Vertically center the items */
+    justify-content: space-between; /* Space out the items */
+    padding: 20px; /* Add some padding for spacing */
+    gap: 36px; /* Space between items */
+}
+
+.main-content {
+    color: white; /* White text color */
+    align-items: center; /* Center items horizontally */
+    justify-content: center; /* Center items vertically */
+    display: flex; /* Flexbox layout */
+    flex-direction: column; /* Stack items vertically */
+}
+
+h1 {
+    font-size: 72px;
+    margin-bottom: 0px;
+}
+
+h2 {
+    font-size: 36px;
+    font-weight: normal;
+    margin-top: 0px;
+}
+
+.portfolio-icon {
+    max-width: 100px; /* Adjust icon size */
+}
+
+.separator {
+    flex-grow: 1; /* Make the <hr> take up remaining space */
+    border: none;
+    border-top: 2px solid white; /* Solid white line */
+    margin-left: 20px;
+    margin-right: 20px; /* Add horizontal margin for spacing */
+    border-radius: 10px; /* Round the edges */
+}
+
+header a {
+    color: white; /* White text color */
+    text-decoration: none; /* Remove underline */
+    font-weight: bold; /* Make links bold */
+    font-size: 1.1rem; /* Adjust font size */
+    margin-right: 20px; /* Add right margin for spacing */
+}
+
+.intro {
+    align-items: center; /* Center items horizontally */
+    gap: 20px; /* Space between items */
+    padding: 20px; /* Add padding for spacing */
+    max-width: 50%;
+    display: flex; /* Flexbox layout */
+    flex-direction: column; /* Stack items vertically */
+    text-align: center;
+}
+
+.intro b {
+    background: linear-gradient(to right, #636CB5, #B46B4B); /* Gradient colors */
+    font-weight: bold; /* Make links bold */
+    background-clip: text; /* Clip background to text */
+    -webkit-background-clip: text; /* Clip background to text */
+    -webkit-text-fill-color: transparent; /* Make text transparent to show gradient */
+}
+
+  
+  
+  

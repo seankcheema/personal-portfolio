@@ -16,7 +16,7 @@ header {
 }
 
 h1 {
-    font-size: 72px;
+    font-size: 86px;
     margin-bottom: 0px;
 }
 
@@ -24,6 +24,7 @@ h2 {
     font-size: 36px;
     font-weight: normal;
     margin-top: 0px;
+    max-width: 55%;
 }
 
 .portfolio-icon {
@@ -51,10 +52,11 @@ header a {
     align-items: center; /* Center items horizontally */
     gap: 20px; /* Space between items */
     padding: 20px; /* Add padding for spacing */
-    max-width: 50%;
     display: flex; /* Flexbox layout */
     flex-direction: column; /* Stack items vertically */
     text-align: center;
+    margin-top: 75px;
+    margin-bottom: 75px;
 }
 
 .intro b {
@@ -65,6 +67,176 @@ header a {
     -webkit-text-fill-color: transparent; /* Make text transparent to show gradient */
 }
 
+.work {
+    display: flex; /* Flexbox layout */
+    flex-wrap: wrap; /* Wrap items to next line */
+    gap: 40px; /* Space between items */
+    justify-content: center; /* Center items horizontally */
+    padding: 20px; /* Add padding for spacing */
+    margin-top: 50px;
+    max-width: 60%;
+}
+
+.about-me {
+    max-width: 60%;
+    background-color: #1e1e1e;
+    border: rgba(255, 255, 255, 0.1) 1px solid; /* White border with 20% opacity */
+}
+
+.about-me h3 {
+    font-size: 32px; /* Adjust font size */
+    margin-bottom: 0;
+}
+
+.project {
+    background: #1e1e1e; /* Dark background color */
+    border-radius: 10px; /* Round the edges */
+    border: rgba(255, 255, 255, 0.1) 1px solid; /* White border with 20% opacity */
+
+    padding: 20px; /* Add padding for spacing */
+    max-width: 450px; /* Limit width */
+    
+    min-width: 450px;
+    min-height: 500px;
+    display: flex; /* Flexbox layout */
+    flex-direction: column; /* Stack items vertically */
+}
+
+.dmweb-project, .dmapp-project {
+    min-height: 550px;
+}
+
+.internship-project {
+    min-height: 250px;
+}
+
+.project h3 {
+    margin-top: 10px; /* Remove top margin */
+    font-size: 32px; /* Adjust font size */
+    margin-bottom: 0;
+}
+
+.project a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 20px;
+}
+
+.project b {
+    font-size: 20px; /* Adjust font size */
+    margin-bottom: 5px; /* Add bottom margin */
+}
+
+.project i {
+    font-size: 20px; /* Adjust font size */
+}
+
+.project p {
+    font-size: 20px; /* Adjust font size */
+    margin-top: 0px; /* Remove top margin */
+    margin-bottom: 0px; /* Remove bottom margin */
+    flex-grow: 1;
+}
+
+.rq-project h3 {
+    color: #38B45D;
+}
+
+.taas-project h3 {
+    color: #D04DFF;
+}
+
+.dmweb-project h3 {
+    color: #F48320;
+}
+
+.dmapp-project h3 {
+    color: #1C61FF;
+}
+
+.internship-project h3 {
+    margin-top: 0px;
+}
+
+.rq-project {
+    background-color: #1F2220;
+}
+
+.taas-project {
+    background-color: #231F25;
+}
+
+.dmweb-project {
+    background-color: #24211E;
+}
+
+.dmapp-project {
+    background-color: #1E2025;
+}
+
+.project hr {
+    opacity: .5;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    width: 100%;
+}
+
+.project img {
+    display: block; /* Remove inline-block spacing */
+    width: 100%; /* Make image responsive to container width */
+    height: auto; /* Maintain aspect ratio */
+    max-height: 269px; /* Limit height if necessary */
+    border-radius: 10px; /* Round edges */
+    object-fit: contain; /* Ensure the whole image fits without cropping */
+}
+
+
+
+.links {
+    display: flex;
+    flex-direction: column; /* Stack links vertically */
+    gap: 10px; /* Add spacing between links */
+    margin-top: auto; /* Push links container to the bottom */
+  }
   
-  
-  
+
+.links a {
+    display: inline-flex; /* Align text and arrow in a line */
+    align-items: center; /* Vertically center the content */
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 20px;
+    border-radius: 5px;
+    position: relative; /* To position the pseudo-element */
+    transition: color 0.3s ease; /* Smooth color transition */
+}
+
+.rq-links a {
+    color: #38B45D; /* Change text color on hover */
+}
+
+.taas-links a {
+    color: #D04DFF; /* Change text color on hover */
+}
+
+.dmweb-links a {
+    color: #F48320; /* Change text color on hover */
+}
+
+.dmapp-links a {
+    color: #1C61FF; /* Change text color on hover */
+}
+
+.arrow {
+    display: inline-block; /* Ensure arrow is treated as a block */
+    margin-left: 8px; /* Space between text and arrow */
+    font-size: 20px; /* Adjust arrow size */
+    transition: transform 0.3s ease; /* Smooth animation */
+    margin-bottom: 2px;
+    font-weight: lighter;
+}
+
+.links a:hover .arrow {
+    transform: translateX(5px); /* Move arrow to the right on hover */
+}

@@ -1,10 +1,29 @@
+html {
+    scroll-behavior: smooth;
+  }
+
+  /* get rid of scroll bar */
+::-webkit-scrollbar {
+    display: none;
+  }
+
 /* Flexbox layout for header */
 header {
     display: flex;
     align-items: center; /* Vertically center the items */
     justify-content: space-between; /* Space out the items */
     padding: 20px; /* Add some padding for spacing */
-    gap: 36px; /* Space between items */
+    /* gap: 2.25rem; Space between items */
+    max-width: 100%;
+}
+
+header a:hover {
+    background: linear-gradient(to right, #636CB5, #B46B4B); /* Gradient colors */
+    font-weight: bold; /* Make links bold */
+    background-clip: text; /* Clip background to text */
+    -webkit-background-clip: text; /* Clip background to text */
+    -webkit-text-fill-color: transparent; /* Make text transparent to show gradient */
+    transform: scale(1.1);
 }
 
 .main-content {
@@ -16,12 +35,12 @@ header {
 }
 
 h1 {
-    font-size: 86px;
+    font-size: 4rem;
     margin-bottom: 0px;
 }
 
 h2 {
-    font-size: 36px;
+    font-size: 2rem;
     font-weight: normal;
     margin-top: 0px;
     max-width: 55%;
@@ -35,8 +54,8 @@ h2 {
     flex-grow: 1; /* Make the <hr> take up remaining space */
     border: none;
     border-top: 2px solid white; /* Solid white line */
-    margin-left: 20px;
-    margin-right: 20px; /* Add horizontal margin for spacing */
+    margin-left: 30px;
+    margin-right: 30px; /* Add horizontal margin for spacing */
     border-radius: 10px; /* Round the edges */
 }
 
@@ -45,12 +64,62 @@ header a {
     text-decoration: none; /* Remove underline */
     font-weight: bold; /* Make links bold */
     font-size: 1.1rem; /* Adjust font size */
-    margin-right: 20px; /* Add right margin for spacing */
+    margin-right: 30px; /* Add right margin for spacing */
+    transition: transform 0.3s ease;
 }
+
+footer {
+    display: flex; /* Use flexbox for layout */
+    flex-direction: column; /* Stack <hr> above <a> and <p> */
+    width: 100%; /* Ensure the footer takes the full width */
+    padding: 20px;
+    box-sizing: border-box; /* Ensure padding doesn't cause overflow */
+}
+
+footer hr {
+    width: 100%; /* Make the <hr> span the entire width */
+    border: none;
+    border-top: 2px solid rgba(255, 255, 255, 0.8); /* Solid white line */
+    margin-bottom: 10px; /* Space between <hr> and the text */
+    opacity: 0.8; /* Slight transparency for better aesthetics */
+}
+
+footer .footer-content {
+    display: flex; /* Use flexbox for horizontal layout */
+    justify-content: space-between; /* Push <p> to the left and <a> to the right */
+    width: 100%; /* Ensure both <p> and <a> take full width */
+    box-sizing: border-box; /* Ensure padding doesn't cause overflow */
+    overflow: hidden; /* Prevent any overflow */
+    flex-wrap: wrap; /* Allow items to wrap on smaller screens */
+}
+
+footer a, footer p {
+    color: rgba(255, 255, 255, 0.8); /* White text color */
+    text-decoration: none; /* Remove underline */
+    font-size: 0.9rem; /* Adjust font size */
+    margin: 0; /* Remove any default margins */
+    transition: transform 0.3s ease, color 0.3s ease; /* Smooth transition */
+    max-width: 100%; /* Prevent them from going off-screen */
+    word-wrap: break-word; /* Ensure long words break correctly */
+}
+
+footer a {
+    margin-left: auto; /* Push the link to the right */
+}
+
+footer a:hover {
+    text-decoration: underline; /* Underline the link on hover */
+}
+
+footer p {
+    margin-right: auto; /* Push the paragraph to the left */
+}
+
+
 
 .intro {
     align-items: center; /* Center items horizontally */
-    gap: 20px; /* Space between items */
+    gap: 1.2rem; /* Space between items */
     padding: 20px; /* Add padding for spacing */
     display: flex; /* Flexbox layout */
     flex-direction: column; /* Stack items vertically */
@@ -59,7 +128,7 @@ header a {
     margin-bottom: 75px;
 }
 
-.intro b {
+.intro b, .about-me b {
     background: linear-gradient(to right, #636CB5, #B46B4B); /* Gradient colors */
     font-weight: bold; /* Make links bold */
     background-clip: text; /* Clip background to text */
@@ -67,57 +136,149 @@ header a {
     -webkit-text-fill-color: transparent; /* Make text transparent to show gradient */
 }
 
-.work {
+/* General container styling */
+.content {
     display: flex; /* Flexbox layout */
     flex-wrap: wrap; /* Wrap items to next line */
-    gap: 40px; /* Space between items */
+    gap: 2.5rem; /*Space between items*/
     justify-content: center; /* Center items horizontally */
     padding: 20px; /* Add padding for spacing */
     margin-top: 50px;
-    max-width: 60%;
+    max-width: 960px; /* Restrict content to 60% of the screen width */
+    margin-left: auto; /* Center container */
+    margin-right: auto; /* Center container */
 }
 
+/* About Me section */
 .about-me {
-    max-width: 50%;
+    width: 100%;
     padding: 20px;
-    margin-top: 20px;
     margin-bottom: 20px;
     border-radius: 10px;
     background-color: #1e1e1e;
     border: rgba(255, 255, 255, 0.1) 1px solid; /* White border with 20% opacity */
+    transform: translateY(100px); /* Start tiles slightly below their final position */
+    transition: transform 1s ease; /* Smooth animation */
 }
 
+.about-me.visible {
+    opacity: 1; /* Make the tile visible */
+    transform: translateY(0); /* Move the tile to its original position */
+}
+
+/* About Me section text */
 .about-me h3 {
-    margin-top: 0px; /* Remove top margin */
-    font-size: 32px; /* Adjust font size */
+    margin-top: 0; /* Remove top margin */
+    font-size: 1.8rem; /* Adjust font size */
     margin-bottom: 0;
 }
 
+.about-me p {
+    font-size: 1.25rem; /* Adjust font size */
+}
+
+/* Project tiles */
 .project {
     background: #1e1e1e; /* Dark background color */
     border-radius: 10px; /* Round the edges */
     border: rgba(255, 255, 255, 0.1) 1px solid; /* White border with 20% opacity */
-
+    flex: 0 0 calc(50% - 20px); /* Take up 45% width minus half the gap for both sides */
+    min-width: 425px;
     padding: 20px; /* Add padding for spacing */
-    max-width: 450px; /* Limit width */
-    
-    min-width: 450px;
-    min-height: 500px;
+    min-height: 550px; /* Consistent height */
     display: flex; /* Flexbox layout */
     flex-direction: column; /* Stack items vertically */
+    box-sizing: border-box; /* Include padding and border in width calculation */
+    transform: translateY(100px); /* Start tiles slightly below their final position */
+    /* transition: transform 1s ease; Smooth animation */
+    transition: all 1s ease;
 }
 
+.project.visible {
+    opacity: 1; /* Make the tile visible */
+    transform: translateY(0); /* Move the tile to its original position */
+}
+
+.project.animate {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.project:nth-child(1) {
+    transition-delay: 0s;
+}
+.project:nth-child(2) {
+    transition-delay: 0.1s;
+}
+.project:nth-child(3) {
+    transition-delay: 0.2s;
+}
+.project:nth-child(4) {
+    transition-delay: 0.3s;
+}
+
+/* Adjust heights for specific tiles */
 .dmweb-project, .dmapp-project {
-    min-height: 550px;
+    min-height: 600px;
+}
+/* Adjust heights for specific tiles */
+.dmweb-links , .dmapp-links {
+    margin-top: 10px;
 }
 
 .internship-project {
     min-height: 250px;
 }
 
+
+
+.socials {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 1.25rem;
+    margin-top: 20px;
+}
+
+.social {
+    display: flex;
+    flex-direction: row;
+    border-radius: 10px;
+    border: rgba(255, 255, 255, 1) 1px solid;
+    padding: 10px;
+    transition: transform 0.3s ease;
+    justify-content: center;
+    align-items: center;
+    will-change: transform; /* Prevents reflow during hover */
+}
+
+.social img {
+    height: 100%; /* Make image responsive to container width */
+    width: auto; /* Maintain aspect ratio */
+    max-width: 1.25rem; /* Limit height if necessary */
+    object-fit: contain; /* Ensure the whole image fits without cropping */
+    transform: none; /* Prevent scaling effect on the image */
+    will-change: unset; /* Prevent reflow for the image */
+}
+
+.social p {
+    margin-top: 0;
+    margin-bottom: 0;
+    margin-left: 10px;
+    font-weight: bold;
+    transform: none; /* Prevent scaling effect on the text */
+    will-change: unset; /* Prevent reflow for the text */
+}
+
+.social:hover {
+    transform: scale(1.1); /* Scale the container only */
+}
+
+
+
 .project h3 {
     margin-top: 10px; /* Remove top margin */
-    font-size: 32px; /* Adjust font size */
+    font-size: 1.8rem; /* Adjust font size */
     margin-bottom: 0;
 }
 
@@ -125,20 +286,20 @@ header a {
     color: white;
     text-decoration: none;
     font-weight: bold;
-    font-size: 20px;
+    font-size: 1.25rem;
 }
 
 .project b {
-    font-size: 20px; /* Adjust font size */
+    font-size: 1.25rem; /* Adjust font size */
     margin-bottom: 5px; /* Add bottom margin */
 }
 
 .project i {
-    font-size: 20px; /* Adjust font size */
+    font-size: 1.25rem; /* Adjust font size */
 }
 
 .project p {
-    font-size: 20px; /* Adjust font size */
+    font-size: 1.25rem; /* Adjust font size */
     margin-top: 0px; /* Remove top margin */
     margin-bottom: 0px; /* Remove bottom margin */
     flex-grow: 1;
@@ -190,28 +351,25 @@ header a {
 .project img {
     display: block; /* Remove inline-block spacing */
     width: 100%; /* Make image responsive to container width */
-    height: auto; /* Maintain aspect ratio */
-    max-height: 269px; /* Limit height if necessary */
+    height: 50%; /* Maintain aspect ratio */
     border-radius: 10px; /* Round edges */
     object-fit: contain; /* Ensure the whole image fits without cropping */
 }
 
-
-
 .links {
     display: flex;
     flex-direction: column; /* Stack links vertically */
-    gap: 10px; /* Add spacing between links */
+    gap: .7rem; /* Add spacing between links */
     margin-top: auto; /* Push links container to the bottom */
   }
   
 
 .links a {
-    display: inline-flex; /* Align text and arrow in a line */
+    display: inline;
     align-items: center; /* Vertically center the content */
     text-decoration: none;
     font-weight: bold;
-    font-size: 20px;
+    font-size: 1.25rem;
     border-radius: 5px;
     position: relative; /* To position the pseudo-element */
     transition: color 0.3s ease; /* Smooth color transition */
@@ -233,6 +391,14 @@ header a {
     color: #1C61FF; /* Change text color on hover */
 }
 
+.dmapp-links {
+    margin-top: 10px;
+}
+
+.dmweb-links {
+    margin-top: 10px;
+}
+
 .arrow {
     display: inline-block; /* Ensure arrow is treated as a block */
     margin-left: 8px; /* Space between text and arrow */
@@ -244,4 +410,45 @@ header a {
 
 .links a:hover .arrow {
     transform: translateX(5px); /* Move arrow to the right on hover */
+}
+
+@media (max-width: 450px) {
+    .project {
+        width: 100% !important; /* Each tile takes up the full width on mobile */
+        max-width: 100%;
+        min-width: 100%;
+    }
+
+    .content {
+        max-width: 100%;
+    }
+
+    .intro h1 {
+        font-size: 2rem; /* Adjust font size */
+    }
+
+    .intro h2 {
+        font-size: 1.25rem; /* Adjust font size */
+        max-width: 100%;
+    }
+
+    .intro {
+        max-width: 100%;
+    }
+
+    .internship-project {
+        min-height: 250px;
+    }
+
+    .separator {
+        display: none;
+    }
+
+    .portfolio-icon {
+        max-width: 50px;
+        margin-right: 30px;
+        
+    }
+
+    
 }

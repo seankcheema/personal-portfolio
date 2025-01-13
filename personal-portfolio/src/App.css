@@ -6,4 +6,5 @@ body {
   padding: 0;
   box-sizing: border-box;
   background-color: #121212;
+  align-items: center;
 }

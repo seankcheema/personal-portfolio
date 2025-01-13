@@ -78,12 +78,17 @@ header a {
 }
 
 .about-me {
-    max-width: 60%;
+    max-width: 50%;
+    padding: 20px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    border-radius: 10px;
     background-color: #1e1e1e;
     border: rgba(255, 255, 255, 0.1) 1px solid; /* White border with 20% opacity */
 }
 
 .about-me h3 {
+    margin-top: 0px; /* Remove top margin */
     font-size: 32px; /* Adjust font size */
     margin-bottom: 0;
 }

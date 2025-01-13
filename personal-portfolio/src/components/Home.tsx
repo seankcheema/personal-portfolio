@@ -94,10 +94,8 @@ const Home: React.FC = () => {
 
       <div className='about-me'>
           <h3>About Me</h3>
-          <p>I am a Master’s student at the University of Florida obtaining a degree in Computer Science with a focus in Human-Centered Computing seeking a Summer 2025 internship in the fields of UI/UX development and Product Design.
-
-Outside of my work, I have earned a black belt in Isshinryu Karate and I love cooking, listening to music, working on my car, and spending time with family and friends.
-</p>
+          <p>I am a Master’s student at the University of Florida obtaining a degree in Computer Science with a focus in Human-Centered Computing seeking a Summer 2025 internship in the fields of UI/UX development and Product Design.</p>
+          <p>Outside of my work, I have earned a black belt in Isshinryu Karate and I love cooking, listening to music, working on my car, and spending time with family and friends.</p>
       </div>
         
     </div>

@@ -1,0 +1,162 @@
+.taas-main-content {
+    color: white; /* White text color */
+    align-items: center; /* Center items horizontally */
+    justify-content: center; /* Center items vertically */
+    display: flex; /* Flexbox layout */
+    flex-direction: column; /* Stack items vertically */
+}
+
+/* General container styling */
+.taas-content {
+    display: flex; /* Flexbox layout */
+    flex-wrap: wrap; /* Wrap items to next line */
+    justify-content: center; /* Center items horizontally */
+    padding: 20px; /* Add padding for spacing */
+    max-width: 960px;
+    margin-left: auto; /* Center container */
+    margin-right: auto; /* Center container */
+}
+
+
+.taas-header {
+    background-color: #231F25;
+    border-radius: 10px; /* Round the edges */
+    border: rgba(255, 255, 255, 0.1) 1px solid; /* White border with 20% opacity */
+    padding: 20px; /* Add padding for spacing */
+    display: flex; /* Flexbox layout */
+    flex-direction: row; /* Stack items vertically */
+    box-sizing: border-box; /* Include padding and border in width calculation */
+    align-items: center;
+    gap: 20px;
+    margin-bottom: 20px;
+}
+
+.taas-info {
+    margin-top: 0px;
+    margin-bottom: 0px;
+}
+
+.taas-info h3 {
+    color: #D04DFF;
+    margin-top: 10px; /* Remove top margin */
+    font-size: 1.8rem; /* Adjust font size */
+    margin-bottom: 0;
+}
+
+.taas-info a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 1.25rem;
+}
+
+.taas-info b {
+    font-size: 1.25rem; /* Adjust font size */
+    margin-bottom: 5px; /* Add bottom margin */
+}
+
+.taas-info i {
+    font-size: 1.25rem; /* Adjust font size */
+}
+
+.taas-info p {
+    font-size: 1.25rem; /* Adjust font size */
+    margin-top: 0px; /* Remove top margin */
+    margin-bottom: 0px; /* Remove bottom margin */
+    flex-grow: 1;
+}
+
+.taas-info hr {
+    opacity: .5;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    width: 100%;
+}
+
+.taas-header img {
+    display: block; /* Remove inline-block spacing */
+    width: 50%; /* Make image responsive to container width */
+    height: auto;
+    border-radius: 10px; /* Round edges */
+    object-fit: contain; /* Ensure the whole image fits without cropping */
+}
+
+.taas-info .links {
+    display: flex;
+    flex-direction: column; /* Stack links vertically */
+    margin-top: 10px; /* Push links container to the bottom */
+  }
+  
+
+.taas-info .links a {
+    margin-top: 0px;
+    margin-bottom: 0px;
+    color: #D04DFF; /* Change text color on hover */
+    display: inline;
+    align-items: center; /* Vertically center the content */
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 1.1rem;
+    border-radius: 5px;
+    position: relative; /* To position the pseudo-element */
+    transition: color 0.3s ease; /* Smooth color transition */
+}
+
+.taas-desc-container {
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+    width: 97%;
+}
+
+.taas-desc h3 {
+    color: #D04DFF;
+    margin-top: 10px; /* Remove top margin */
+    font-size: 1.5rem; /* Adjust font size */
+    margin-bottom: 0;
+}
+
+.taas-desc p {
+    font-size: 1.1rem;
+}
+
+.taas-desc img {
+    display: block;
+    margin: 0 auto;
+}
+
+.student-lofi-graphic {
+    width: 60%;
+    align-self: center;
+}
+
+.prof-lofi-graphic, .manager-lofi-graphic {
+    width: 80%;
+    align-self: center;
+}
+
+.prototype-taas-desc img {
+    width: 80%;
+    align-self: center;
+    margin-bottom: 20px;
+}
+
+.graph-graphic {
+    width: 80%;
+}
+
+
+@media (max-width: 450px) {
+    .taas-header{
+        flex-direction: column-reverse;
+    }
+
+    .taas-header img {
+        width: 100%;
+        height: 50%;
+    }
+    .value {
+        margin-left: 20px;
+        text-align: right;
+      }
+}

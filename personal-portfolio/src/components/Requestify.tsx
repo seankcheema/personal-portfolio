@@ -12,7 +12,7 @@ const Requestify: React.FC = () => {
     <a href="mailto:seankcheema@gmail.com">Contact</a>
   </header>
   <div className='rq-main-content'>
-    <div className='rq-content' id='work'>
+    <div className='rq-content'>
       <div className='rq-header'>
           <div className='rq-info'>
             <h3>Requestify</h3>

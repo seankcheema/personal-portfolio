@@ -50,6 +50,10 @@ h2 {
     max-width: 100px; /* Adjust icon size */
 }
 
+.portfolio-icon:hover{
+    cursor: pointer;
+}
+
 .separator {
     flex-grow: 1; /* Make the <hr> take up remaining space */
     border: none;
@@ -359,7 +363,6 @@ footer p {
 .links {
     display: flex;
     flex-direction: column; /* Stack links vertically */
-    gap: .7rem; /* Add spacing between links */
     margin-top: auto; /* Push links container to the bottom */
   }
   
@@ -448,6 +451,10 @@ footer p {
         max-width: 50px;
         margin-right: 30px;
         
+    }
+
+    footer a, footer p {
+        font-size: .5rem;
     }
 
     

@@ -15,7 +15,7 @@ const Home: React.FC = () => {
           }
         });
       },
-      { threshold: 0.2 } // Trigger when 20% of the tile is visible
+      { threshold: 0.05 } 
     );
 
     tiles.forEach((tile) => observer.observe(tile));
@@ -31,7 +31,7 @@ const Home: React.FC = () => {
     const options: IntersectionObserverInit = {
       root: null, // Use the viewport as the root
       rootMargin: '0px',
-      threshold: 0.2, // Trigger when 50% of the element is in view
+      threshold: 0.05, // Trigger when 50% of the element is in view
     };
 
     // Callback function to add 'visible' class when tiles are in view

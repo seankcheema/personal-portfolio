@@ -1,0 +1,29 @@
+/* BackToTop.css */
+.back-to-top {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    height: 50px;
+    color: rgba(255, 255, 255, .8);
+    font-size: 1rem;
+    cursor: pointer;
+    
+    z-index: 1000;
+    transition: opacity 0.3s, transform 0.3s;
+    opacity: 0; /* Start as invisible */
+  visibility: hidden; /* Prevent interaction when invisible */
+  }
+
+  .back-to-top.visible {
+    opacity: 1; /* Fully visible */
+    visibility: visible; /* Allow interaction */
+  }
+  
+  .back-to-top:hover {
+    transform: scale(1.1);
+  }
+  
+  .back-to-top:active {
+    transform: scale(0.95);
+  }
+  

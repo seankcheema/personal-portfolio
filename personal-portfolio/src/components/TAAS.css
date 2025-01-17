@@ -109,6 +109,8 @@
     width: 97%;
 }
 
+
+
 .taas-desc h3 {
     color: #D04DFF;
     margin-top: 10px; /* Remove top margin */
@@ -145,6 +147,9 @@
     width: 80%;
 }
 
+.taas-desc-container img {
+    margin-top: 20px;
+}
 
 @media (max-width: 450px) {
     .taas-header{

@@ -110,6 +110,10 @@
     width: 97%;
 }
 
+.rq-desc-container img {
+    margin-top: 20px;
+}
+
 .rq-desc h3 {
     color: #38B45D;
     margin-top: 10px; /* Remove top margin */
@@ -191,4 +195,8 @@
         margin-left: 20px;
         text-align: right;
       }
+
+      .solution-graphic {
+        width: 80%;
+    }
 }

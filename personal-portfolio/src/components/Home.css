@@ -47,7 +47,7 @@ h2 {
 }
 
 .portfolio-icon {
-    max-width: 100px; /* Adjust icon size */
+    max-width: 80px; /* Adjust icon size */
 }
 
 .portfolio-icon:hover{
@@ -161,7 +161,7 @@ footer p {
     border-radius: 10px;
     background-color: #1e1e1e;
     border: rgba(255, 255, 255, 0.1) 1px solid; /* White border with 20% opacity */
-    transform: translateY(100px); /* Start tiles slightly below their final position */
+    transform: translateY(80px); /* Start tiles slightly below their final position */
     transition: transform 1s ease; /* Smooth animation */
 }
 
@@ -452,7 +452,7 @@ footer p {
     }
 
     .portfolio-icon {
-        max-width: 50px;
+        max-width: 40px;
         margin-right: 30px;
         
     }
@@ -461,5 +461,6 @@ footer p {
         font-size: .5rem;
     }
 
+    
     
 }

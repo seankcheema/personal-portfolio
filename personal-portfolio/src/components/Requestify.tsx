@@ -63,8 +63,8 @@ const Requestify: React.FC = () => {
           <h3>Wireframe</h3>
           <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;The wireframing for this application was done using Figma and underwent six potential end-user interviews during three sprints to refine it and iterate through designs. As a product of these interviews, the team introduced features such as the “Clear Queue” button, song history, and submission confirmation when requesting a song.</p>
         </div>
-        <img src="../assets/Wireframe Graphic Mobile.png" alt="Wireframe mobile graphic" className='wireframe-graphic'/>
-        <img src="../assets/Wireframe Graphic Desktop.png" alt="Wireframe desktop graphic" className='wireframe-graphic'/>
+        <img src="../assets/Wireframe graphic Mobile.png" alt="Wireframe mobile graphic" className='wireframe-graphic'/>
+        <img src="../assets/Wireframe graphic Desktop.png" alt="Wireframe desktop graphic" className='wireframe-graphic'/>
         <div className='rq-desc'>
           <h3>How It Works</h3>
           <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;The following software architecture diagram, made in draw.io, serves to visualize how the system works and serves both user types in an safe, efficient way.</p>

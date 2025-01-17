@@ -4,7 +4,7 @@ import './TAAS.css';
 const TAAS: React.FC = () => {
   return <div className="home">
   <header>
-    <img src="../assets/portfolio-icon-transparent.svg" alt="portfolio icon" className='portfolio-icon' onClick={() => window.location.href = '/'}/>
+    <img src="../assets/portfolio-icon-transparent.png" alt="portfolio icon" className='portfolio-icon' onClick={() => window.location.href = '/'}/>
 
     <hr className="separator" />
     <a href="/#work">Work</a>

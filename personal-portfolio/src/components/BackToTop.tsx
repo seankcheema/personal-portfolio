@@ -19,12 +19,12 @@ const BackToTop: React.FC = () => {
   };
 
   return (
-    <p
+    <div
       className={`back-to-top ${isVisible ? "visible" : ""}`}
       onClick={scrollToTop}
     >
-      Back to top ↑
-    </p>
+      <p>Back to top ↑</p>
+    </div>
   );
 };
 

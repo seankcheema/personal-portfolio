@@ -1,29 +1,46 @@
 /* BackToTop.css */
 .back-to-top {
-    position: fixed;
-    bottom: 20px;
-    right: 20px;
-    height: 50px;
-    color: rgba(255, 255, 255, .8);
-    font-size: 1rem;
-    cursor: pointer;
-    
-    z-index: 1000;
-    transition: opacity 0.3s, transform 0.3s;
-    opacity: 0; /* Start as invisible */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #1e1e1e;
+  border-radius: 10px;
+  border: 1px solid rgba(255, 255, 255, .2);
+  padding: 10px;
+  position: fixed;
+  bottom: 60px;
+  right: 20px;
+  color: rgba(255, 255, 255, .8);
+  font-size: 1rem;
+  cursor: pointer;
+  
+  z-index: 1000;
+  transition: opacity 0.3s, transform 0.3s;
+  opacity: 0; /* Start as invisible */
   visibility: hidden; /* Prevent interaction when invisible */
   }
 
-  .back-to-top.visible {
-    opacity: 1; /* Fully visible */
-    visibility: visible; /* Allow interaction */
+.back-to-top p {
+  margin: 0;
+}
+
+.back-to-top.visible {
+  opacity: 1; /* Fully visible */
+  visibility: visible; /* Allow interaction */
+}
+
+.back-to-top:hover {
+  transform: scale(1.1);
+}
+
+.back-to-top:active {
+  transform: scale(0.95);
+}
+
+@media (max-width: 450px) {
+  .back-to-top {
+    bottom: 50px;
+    right: 10px;
   }
-  
-  .back-to-top:hover {
-    transform: scale(1.1);
-  }
-  
-  .back-to-top:active {
-    transform: scale(0.95);
-  }
+}
   

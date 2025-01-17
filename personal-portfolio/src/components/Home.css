@@ -461,6 +461,8 @@ footer p {
         font-size: .5rem;
     }
 
-    
+    .content {
+        margin-top: 0px;
+    }
     
 }

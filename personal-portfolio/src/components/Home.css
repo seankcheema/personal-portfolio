@@ -360,6 +360,10 @@ footer p {
     object-fit: contain; /* Ensure the whole image fits without cropping */
 }
 
+.project img:hover {
+    cursor: pointer;
+}
+
 .links {
     display: flex;
     flex-direction: column; /* Stack links vertically */

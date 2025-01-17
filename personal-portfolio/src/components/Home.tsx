@@ -78,7 +78,7 @@ const Home: React.FC = () => {
 
       <div className='content' id='work'>
         <div className='project rq-project'>
-            <img src="../assets/Requestify Graphic.png" alt="Requestify" />
+            <img src="../assets/Requestify Graphic.png" alt="Requestify" onClick={() => window.location.href = "requestify"} />
             <h3>Requestify</h3>
             <i>2024</i>
             <hr/>
@@ -92,7 +92,7 @@ const Home: React.FC = () => {
         </div>
 
         <div className='project taas-project'>
-            <img src="../assets/TAAS Graphic.png" alt="TAAS" />
+            <img src="../assets/TAAS Graphic.png" alt="TAAS" onClick={() => window.location.href = "taas"}/>
             <h3>TAAS Redesign</h3>
             <i>2024</i>
             <hr/>
@@ -106,7 +106,7 @@ const Home: React.FC = () => {
         </div>
 
         <div className='project dmweb-project'>
-            <img src="../assets/DM Website Graphic.png" alt="DM Website" />
+            <img src="../assets/DM Website Graphic.png" alt="DM Website" onClick={() => window.open("https://floridadm.org/", "_blank")}/>
             <h3>Dance Marathon Website</h3>
             <i>2024 - Present</i>
             <hr/>
@@ -120,7 +120,7 @@ const Home: React.FC = () => {
         </div>
 
         <div className='project dmapp-project'>
-            <img src="../assets/DM App Graphic.png" alt="DM App" />
+            <img src="../assets/DM App Graphic.png" alt="DM App" onClick={() => window.open("https://apps.apple.com/us/app/dm-uf/id6480380095", "_blank")}/>
             <h3>Dance Marathon App</h3>
             <i>2024 - Present</i>
             <hr/>

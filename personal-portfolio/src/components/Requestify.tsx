@@ -47,7 +47,7 @@ const Requestify: React.FC = () => {
         </div>
         <div className='rq-desc'>
           <h3>Problem Statement</h3>
-          <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;DJs often face challenges in managing song requests at live events, as traditional methods like verbal communication or handwritten notes can be disorganized, leading to misunderstandings and missed requests. With the growing demand for personalized music, a digital platform for song requests could streamline interactions, enhance the audience's experience, and support the success of DJs and venues by providing a structured, efficient solution. </p>
+          <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;DJs often face challenges while managing song requests at live events, as traditional methods like verbal communication or handwritten notes can be disorganized, leading to misunderstandings and missed requests. With the growing demand for personalized music, a digital platform for song requests could streamline interactions, enhance the audience's experience, and support the success of DJs and venues by providing a structured, efficient solution. </p>
         </div>
         <div className='rq-desc'>
           <h3>Related Work</h3>

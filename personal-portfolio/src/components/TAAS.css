@@ -164,4 +164,8 @@
         margin-left: 20px;
         text-align: right;
       }
+
+    .taas-desc-container img {
+        width: 100%;
+    }
 }

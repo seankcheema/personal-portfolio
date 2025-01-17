@@ -1,7 +1,17 @@
-import React from 'react';
+import React, {useState} from 'react';
 import './Requestify.css';
 
 const Requestify: React.FC = () => {
+  const [modalImage, setModalImage] = useState<string | null>(null);
+
+  const openModal = (imageSrc: string) => {
+    setModalImage(imageSrc);
+  };
+
+  const closeModal = () => {
+    setModalImage(null);
+  };
+
   return <div className="home">
   <header>
     <img src="../assets/portfolio-icon-transparent.png" alt="portfolio icon" className='portfolio-icon' onClick={() => window.location.href = '/'}/>
@@ -38,7 +48,11 @@ const Requestify: React.FC = () => {
               </a>
             </div>
           </div>
-          <img src="../assets/Requestify Graphic.png" alt="Requestify" />
+          <img
+            src="../assets/Requestify Graphic.png"
+            alt="Requestify"
+            onClick={() => openModal('../assets/Requestify Graphic.png')}
+          />
       </div>
       <div className='rq-desc-container'>
         <div className='rq-desc'>
@@ -53,7 +67,12 @@ const Requestify: React.FC = () => {
           <h3>Related Work</h3>
           <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Several existing applications, such as RequestNow, limeDJ, and QueueDJ, offer similar functionality but each has limitations. These limitations include having to download an app, requiring payment to request songs, and queues that aren’t interactive. These limitations discourage participation among users leaving room for Requestify to offer a more innovative and user-friendly alternative.</p>
         </div>
-        <img src="../assets/Solution Graphic.png" alt="solution graphic" className='solution-graphic'/>
+        <img
+          src="../assets/Solution Graphic.png"
+          alt="Solution Graphic"
+          className="solution-graphic"
+          onClick={() => openModal('../assets/Solution Graphic.png')}
+        />
         <div className='rq-desc'>
           <h3>Solution</h3>
           <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Several existing applications, such as RequestNow, limeDJ, and QueueDJ, offer similar functionality but each has limitations. These limitations include having to download an app, requiring payment to request songs, and queues that aren’t interactive. These limitations discourage participation among users leaving room for Requestify to offer a more innovative and user-friendly alternative.</p>
@@ -63,13 +82,28 @@ const Requestify: React.FC = () => {
           <h3>Wireframe</h3>
           <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;The wireframing for this application was done using Figma and underwent six potential end-user interviews during three sprints to refine it and iterate through designs. As a product of these interviews, the team introduced features such as the “Clear Queue” button, song history, and submission confirmation when requesting a song.</p>
         </div>
-        <img src="../assets/Wireframe graphic Mobile.png" alt="Wireframe mobile graphic" className='wireframe-graphic'/>
-        <img src="../assets/Wireframe graphic Desktop.png" alt="Wireframe desktop graphic" className='wireframe-graphic'/>
+        <img
+          src="../assets/Wireframe graphic Mobile.png"
+          alt="Wireframe Mobile Graphic"
+          className="wireframe-graphic"
+          onClick={() => openModal('../assets/Wireframe graphic Mobile.png')}
+        />
+        <img
+          src="../assets/Wireframe graphic Desktop.png"
+          alt="Wireframe Desktop Graphic"
+          className="wireframe-graphic"
+          onClick={() => openModal('../assets/Wireframe graphic Desktop.png')}
+        />
         <div className='rq-desc'>
           <h3>How It Works</h3>
           <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;The following software architecture diagram, made in draw.io, serves to visualize how the system works and serves both user types in an safe, efficient way.</p>
         </div>
-        <img src="../assets/SAD.png" alt="SAD graphic" className='wireframe-graphic'/>
+        <img
+          src="../assets/SAD.png"
+          alt="SAD Graphic"
+          className="wireframe-graphic"
+          onClick={() => openModal('../assets/SAD.png')}
+        />
         
         <div className='rq-desc'>
           <h3>Tech Stack</h3>
@@ -96,8 +130,28 @@ const Requestify: React.FC = () => {
           <h3>Final Product</h3>
           <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;The final product developed is a ready-to-deploy web application using the above tech stack and tested via demos and end-to-end testing. </p>
         </div>
-        <img src="../assets/RQ Graphic Mobile.png" alt="Final mobile graphic" className='wireframe-graphic'/>
-        <img src="../assets/RQ Graphic Desktop.png" alt="Final desktop graphic" className='wireframe-graphic'/>
+        <img
+          src="../assets/RQ Graphic Mobile.png"
+          alt="Final Mobile Graphic"
+          className="wireframe-graphic"
+          onClick={() => openModal('../assets/RQ Graphic Mobile.png')}
+        />
+        <img
+          src="../assets/RQ Graphic Desktop.png"
+          alt="Final Desktop Graphic"
+          className="wireframe-graphic"
+          onClick={() => openModal('../assets/RQ Graphic Desktop.png')}
+        />
+        {modalImage && (
+          <div className="modal" onClick={closeModal}>
+            <div className="modal-content" onClick={(e) => e.stopPropagation()}>
+              <img src={modalImage} alt="Enlarged" />
+              <div className="close-btn" onClick={closeModal}>
+                Close
+              </div>
+            </div>
+          </div>
+        )}
       </div>
     </div>
 

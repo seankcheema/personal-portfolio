@@ -17,6 +17,9 @@
     margin-right: auto; /* Center container */
 }
 
+.rq-content img:hover {
+    cursor: pointer;
+}
 
 .rq-header {
     background-color: #1F2220;

@@ -433,6 +433,7 @@ footer p {
   }
   
   .modal-content {
+    display: flex;
     position: relative;
     align-items: center;
     justify-content: center;
@@ -451,8 +452,8 @@ footer p {
     top: 10px;
     right: 10px;
     background-color: #1e1e1e;
-    border: 1px solid rgba(255, 255, 255, 0.8);
-    border-radius: 25%;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    border-radius: 10px;
     padding: 5px 10px;
     cursor: pointer;
     color: rgba(255, 255, 255, 0.8);

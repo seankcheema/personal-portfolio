@@ -63,7 +63,7 @@ const Home: React.FC = () => {
   return (
     <div className="home">
     <header>
-      <img src="../assets/portfolio-icon-transparent.svg" alt="portfolio icon" className='portfolio-icon'/>
+      <img src="${process.env.PUBLIC_URL}/assets/portfolio-icon-transparent.svg" alt="portfolio icon" className='portfolio-icon'/>
 
       <hr className="separator" />
       <a href="#work">Work</a>

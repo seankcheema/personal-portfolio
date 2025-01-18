@@ -1,7 +1,11 @@
-import React, { useEffect } from 'react';
+import React, { useEffect, useState } from 'react';
 import './Home.css';
+import Header from './Header.tsx';
+import { useLocation } from 'react-router-dom';
 
 const Home: React.FC = () => {
+  const location = useLocation();
+
   useEffect(() => {
     const tiles = document.querySelectorAll(".project");
     const observer = new IntersectionObserver(
@@ -34,6 +38,7 @@ const Home: React.FC = () => {
       threshold: 0.05, // Trigger when 50% of the element is in view
     };
 
+
     // Callback function to add 'visible' class when tiles are in view
     const callback: IntersectionObserverCallback = (entries, observer) => {
       entries.forEach((entry: IntersectionObserverEntry) => {
@@ -59,17 +64,20 @@ const Home: React.FC = () => {
       });
     };
   }, []); // Empty dependency array to only run this once on mount
-     
+
+   // Effect to scroll to the "About" section if it's in the URL
+   useEffect(() => {
+    if (location.hash) {
+      const element = document.querySelector(location.hash);
+      if (element) {
+        element.scrollIntoView({ behavior: 'smooth' });
+      }
+    }
+  }, [location]);
+
   return (
     <div className="home">
-    <header>
-      <img src="../assets/portfolio-icon-transparent.png" alt="portfolio icon" className='portfolio-icon'/>
-
-      <hr className="separator" />
-      <a href="#work">Work</a>
-      <a href="/files/Sean Cheema Resume.pdf" target="_blank" rel="noopener noreferrer">Resume</a>
-      <a href="mailto:seankcheema@gmail.com">Contact</a>
-    </header>
+    <Header />
     <div className='main-content'>
       <div className="intro">
         <h1>Hi, I'm Sean Cheema</h1>
@@ -149,7 +157,7 @@ const Home: React.FC = () => {
             <p>Developed full stack applications that reduced task times for engineers by up to 99% and managed thousands of data entries for modeling data.</p>
         </div>
 
-        <div className='about-me'>
+        <div className='about-me' id='about'>
           <h3>About Me</h3>
           <p>I am a Master’s student at the University of Florida obtaining a degree in Computer Science with a focus in Human-Centered Computing seeking a <b>Summer 2025 internship</b> in the fields of <b>UI/UX development</b> and <b>Product Design</b>.</p>
           <p>What got me interested in this field was the user-facing aspect. I was never super into the hardcore data structures and algorithms concepts and found more excitement in talking to people to find out their needs. By completing projects where I got to see end users' joy while using a product tailored to them, I found my purpose in the field of Computer Science.</p>
@@ -162,15 +170,6 @@ const Home: React.FC = () => {
             >
                 <img src="../assets/linked in.png" alt="LinkedIn" />
                 <p>LinkedIn</p>
-            </div>
-
-            <div
-                className="social"
-                onClick={() => window.location.href = "mailto:seankcheema@gmail.com"}
-                style={{ cursor: "pointer" }}
-            >
-                <img src="../assets/Email.png" alt="Email" />
-                <p>Email</p>
             </div>
 
             <div
@@ -189,6 +188,15 @@ const Home: React.FC = () => {
             >
                 <img src="../assets/Github.png" alt="GitHub" />
                 <p>GitHub</p>
+            </div>
+
+            <div
+                className="social"
+                onClick={() => window.location.href = "mailto:seankcheema@gmail.com"}
+                style={{ cursor: "pointer" }}
+            >
+                <img src="../assets/Email.png" alt="Email" />
+                <p>Email</p>
             </div>
         </div>
 

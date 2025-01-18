@@ -1,11 +1,15 @@
 import React, {useState} from 'react';
 import './Requestify.css';
+import Header from './Header.tsx';
 
 const Requestify: React.FC = () => {
   const [modalImage, setModalImage] = useState<string | null>(null);
 
   const openModal = (imageSrc: string) => {
-    setModalImage(imageSrc);
+    if (window.innerWidth > 768) {
+      // Only allow modal to open on non-mobile screens
+      setModalImage(imageSrc);
+    }
   };
 
   const closeModal = () => {
@@ -13,14 +17,7 @@ const Requestify: React.FC = () => {
   };
 
   return <div className="home">
-  <header>
-    <img src="../assets/portfolio-icon-transparent.png" alt="portfolio icon" className='portfolio-icon' onClick={() => window.location.href = '/'}/>
-
-    <hr className="separator" />
-    <a href="/#work">Work</a>
-    <a href="/files/Sean Cheema Resume.pdf" target="_blank" rel="noopener noreferrer">Resume</a>
-    <a href="mailto:seankcheema@gmail.com">Contact</a>
-  </header>
+  <Header />
   <div className='rq-main-content'>
     <div className='rq-content'>
       <div className='rq-header'>
@@ -137,12 +134,41 @@ const Requestify: React.FC = () => {
           onClick={() => openModal('../assets/RQ Graphic Mobile.png')}
         />
         <img
-          src="../assets/RQ Graphic Desktop.png"
+          src="../assets/Dashboard.png"
           alt="Final Desktop Graphic"
           className="wireframe-graphic"
-          onClick={() => openModal('../assets/RQ Graphic Desktop.png')}
+          onClick={() => openModal('../assets/Dashboard.png')}
         />
-        {modalImage && (
+        <img
+          src="../assets/Message.png"
+          alt="Final Desktop Graphic"
+          className="wireframe-graphic"
+          onClick={() => openModal('../assets/Message.png')}
+        />
+        <img
+          src="../assets/QR.png"
+          alt="Final Desktop Graphic"
+          className="wireframe-graphic"
+          onClick={() => openModal('../assets/QR.png')}
+        />
+        <img
+          src="../assets/Profile.png"
+          alt="Final Desktop Graphic"
+          className="wireframe-graphic"
+          onClick={() => openModal('../assets/Profile.png')}
+        />
+        <img
+          src="../assets/History.png"
+          alt="Final Desktop Graphic"
+          className="wireframe-graphic"
+          onClick={() => openModal('../assets/History.png')}
+        />
+        
+      </div>
+    </div>
+
+    
+    {modalImage && (
           <div className="modal" onClick={closeModal}>
             <div className="modal-content" onClick={(e) => e.stopPropagation()}>
               <img src={modalImage} alt="Enlarged" />
@@ -152,11 +178,6 @@ const Requestify: React.FC = () => {
             </div>
           </div>
         )}
-      </div>
-    </div>
-
-    
-      
   </div>
   <footer>
     <hr />

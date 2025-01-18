@@ -81,7 +81,7 @@ const Home: React.FC = () => {
     <div className='main-content'>
       <div className="intro">
         <h1>Hi, I'm Sean Cheema</h1>
-        <h2>I am a pixel-perfect <b>UI/UX engineer</b>, fascinated by how people interact with technology.</h2>
+        <h2>I am a pixel-perfect <b>UI/UX designer</b>, fascinated by how people interact with technology.</h2>
       </div>
 
       <div className='content' id='work'>

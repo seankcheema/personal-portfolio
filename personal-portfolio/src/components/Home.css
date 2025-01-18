@@ -7,24 +7,7 @@ html {
     display: none;
   }
 
-/* Flexbox layout for header */
-header {
-    display: flex;
-    align-items: center; /* Vertically center the items */
-    justify-content: space-between; /* Space out the items */
-    padding: 20px; /* Add some padding for spacing */
-    /* gap: 2.25rem; Space between items */
-    max-width: 100%;
-}
 
-header a:hover {
-    background: linear-gradient(to right, #636CB5, #B46B4B); /* Gradient colors */
-    font-weight: bold; /* Make links bold */
-    background-clip: text; /* Clip background to text */
-    -webkit-background-clip: text; /* Clip background to text */
-    -webkit-text-fill-color: transparent; /* Make text transparent to show gradient */
-    transform: scale(1.1);
-}
 
 .main-content {
     color: white; /* White text color */
@@ -46,31 +29,7 @@ h2 {
     max-width: 55%;
 }
 
-.portfolio-icon {
-    max-width: 80px; /* Adjust icon size */
-}
 
-.portfolio-icon:hover{
-    cursor: pointer;
-}
-
-.separator {
-    flex-grow: 1; /* Make the <hr> take up remaining space */
-    border: none;
-    border-top: 2px solid white; /* Solid white line */
-    margin-left: 30px;
-    margin-right: 30px; /* Add horizontal margin for spacing */
-    border-radius: 10px; /* Round the edges */
-}
-
-header a {
-    color: white; /* White text color */
-    text-decoration: none; /* Remove underline */
-    font-weight: bold; /* Make links bold */
-    font-size: 1.1rem; /* Adjust font size */
-    margin-right: 30px; /* Add right margin for spacing */
-    transition: transform 0.3s ease;
-}
 
 footer {
     display: flex; /* Use flexbox for layout */
@@ -246,10 +205,11 @@ footer p {
 
 .social {
     display: flex;
+    /* width: 143px; */
     flex-direction: row;
     border-radius: 10px;
     border: rgba(255, 255, 255, 1) 1px solid;
-    padding: 10px;
+    padding:10px;
     transition: transform 0.3s ease;
     justify-content: center;
     align-items: center;
@@ -419,6 +379,11 @@ footer p {
     transform: translateX(5px); /* Move arrow to the right on hover */
 }
 
+
+
+
+
+
 @media (max-width: 450px) {
     .project {
         width: 100% !important; /* Each tile takes up the full width on mobile */
@@ -464,5 +429,7 @@ footer p {
     .content {
         margin-top: 0px;
     }
+
+    
     
 }

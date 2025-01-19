@@ -48,13 +48,7 @@ header a:hover {
     transform: scale(1.1);
 }
 
-.menu-button {
-    color: rgba(255, 255, 255, 1); /* White text color */
-    font-size: 30px; /* Adjust font size */
-    background-color: none; /* Transparent background */
-    margin: 0px;
-    transition: transform 0.3s ease; /* Smooth animation */
-}
+
 
 .sidebar {
     display: flex;

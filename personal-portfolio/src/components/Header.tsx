@@ -1,6 +1,7 @@
 import React, {useState, useEffect} from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faBars } from '@fortawesome/free-solid-svg-icons';
+import Hamburger from 'hamburger-react';
 import './Header.css';
 
 const Header: React.FC = () => {
@@ -31,7 +32,7 @@ const Header: React.FC = () => {
           {isMobile ? (
           <>
             {/* Menu button for mobile */}
-            <FontAwesomeIcon icon={faBars} size="lg" onClick={toggleSidebar} className='menu-button'/>
+            <Hamburger rounded onToggle={toggleSidebar} color='white' duration={.7}/>
 
             {/* Sidebar */}
             <nav className={`sidebar ${isSidebarOpen ? 'open' : ''}`}>

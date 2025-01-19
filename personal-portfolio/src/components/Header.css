@@ -90,4 +90,9 @@ header a:hover {
     .portfolio-icon {
         max-width: 40px; /* Adjust icon size */
     }
+
+    header a:hover {
+        transform: none;
+        font-weight: normal;
+    }
 }

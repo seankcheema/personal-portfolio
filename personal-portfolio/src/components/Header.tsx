@@ -32,7 +32,7 @@ const Header: React.FC = () => {
           {isMobile ? (
           <>
             {/* Menu button for mobile */}
-            <Hamburger rounded onToggle={toggleSidebar} color='white' duration={.7}/>
+            <Hamburger rounded toggled={isSidebarOpen} toggle={setSidebarOpen}  color='white' duration={.7}/>
 
             {/* Sidebar */}
             <nav className={`sidebar ${isSidebarOpen ? 'open' : ''}`}>

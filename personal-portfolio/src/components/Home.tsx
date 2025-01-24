@@ -80,7 +80,7 @@ const Home: React.FC = () => {
     <Header />
     <div className='main-content'>
       <div className="intro">
-        <h1>Hi, I'm Sean Cheema</h1>
+        <h1>Hi, I'm Sean</h1>
         <h2>I am a pixel-perfect <b>UI/UX designer</b>, fascinated by how people interact with technology.</h2>
       </div>
 

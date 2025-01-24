@@ -151,7 +151,7 @@
 .rq-desc-container i {
     opacity: 0;
     transform: translateY(50px);
-    transition: all 0.5s ease;
+    transition: all 1s ease;
 }
 
 .rq-desc.slide-up,

@@ -185,7 +185,7 @@ li {
 .rq-desc p {
     font-size: 1.1rem;
     text-align: left;
-    margin-top: 10px; /* Remove top margin */
+    margin-top: 10px;
 }
 
 .solution-graphic{
@@ -282,7 +282,7 @@ li {
     font-size: 1rem;
   }
 
-@media (max-width: 450px) {
+@media (max-width: 960px) {
     .rq-header{
         flex-direction: column-reverse;
     }

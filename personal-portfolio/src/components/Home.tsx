@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react';
+import React, { useEffect } from 'react';
 import './Home.css';
 import Header from './Header.tsx';
 import { useLocation } from 'react-router-dom';

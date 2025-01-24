@@ -17,6 +17,13 @@
     margin-right: auto; /* Center container */
 }
 
+.taas-wrap {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 10px;
+}
 
 .taas-header {
     background-color: #231F25;
@@ -34,6 +41,10 @@
 .taas-info {
     margin-top: 0px;
     margin-bottom: 0px;
+}
+
+.li {
+    font-size: 1.1rem;
 }
 
 .taas-info h3 {
@@ -106,25 +117,69 @@
     display: flex;
     flex-direction: column;
     align-content: center;
+    justify-content: center;
     width: 97%;
+    text-align: center;
 }
 
+.taas-desc-container i{
+    font-size: .8rem;
+    color: rgba(255, 255, 255, 0.8);
+    text-align: center;
+    margin-top: 10px;
+    margin-bottom: 20px;
+}
 
+.taas-desc,
+.taas-desc-container img {
+  opacity: 0;
+  transform: translateY(50px);
+  transition: all 1s ease;
+}
+
+.taas-desc-container i {
+    opacity: 0;
+    transform: translateY(50px);
+    transition: all 0.5s ease;
+}
+
+.taas-desc.slide-up,
+.taas-desc-container img.slide-up,
+.taas-desc-container i.slide-up {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.small-taas-desc {
+    width: 450px;
+}
+
+.taas-desc {
+    text-align: left;
+    margin-top: 25px;
+    margin-bottom: 25px;
+}
 
 .taas-desc h3 {
     color: #D04DFF;
     margin-top: 10px; /* Remove top margin */
-    font-size: 1.5rem; /* Adjust font size */
+    font-size: 1.3rem; /* Adjust font size */
     margin-bottom: 0;
 }
 
 .taas-desc p {
     font-size: 1.1rem;
+    margin-top: 10px;
 }
 
 .taas-desc img {
     display: block;
     margin: 0 auto;
+}
+
+.old-system-graphic {
+    width: 100%;
+    align-self: center;
 }
 
 .student-lofi-graphic {
@@ -144,7 +199,7 @@
 }
 
 .graph-graphic {
-    width: 80%;
+    width: 100%;
 }
 
 .taas-desc-container img {
@@ -195,9 +250,18 @@
     font-size: 1rem;
   }
 
-@media (max-width: 450px) {
+@media (max-width: 960px) {
     .taas-header{
         flex-direction: column-reverse;
+    }
+
+    .small-taas-desc {
+        width: 100%;
+    }
+
+    .taas-desc {
+        margin-bottom: 10px;
+        margin-top: 10px;
     }
 
     .taas-header img {

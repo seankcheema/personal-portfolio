@@ -1,4 +1,4 @@
-import React, {useState} from 'react';
+import React, {useState, useEffect} from 'react';
 import './Requestify.css';
 import Header from './Header.tsx';
 
@@ -15,6 +15,28 @@ const Requestify: React.FC = () => {
   const closeModal = () => {
     setModalImage(null);
   };
+
+  useEffect(() => {
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add('slide-up');
+            observer.unobserve(entry.target); // Stop observing after animation
+          }
+        });
+      },
+      {
+        threshold: 0, // Trigger when the element is viewable
+      }
+    );
+  
+    const elementsToObserve = document.querySelectorAll('.rq-desc, .rq-desc-container img, .rq-desc-container i');
+    elementsToObserve.forEach((el) => observer.observe(el));
+  
+    return () => observer.disconnect(); // Clean up the observer
+  }, []);
+  
 
   return <div className="home">
   <Header />
@@ -52,17 +74,25 @@ const Requestify: React.FC = () => {
           />
       </div>
       <div className='rq-desc-container'>
-        <div className='rq-desc'>
+        <div className= 'rq-wrap'>
+        <div className='rq-desc small-rq-desc'>
           <h3>My Contribution</h3>
-          <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;In  this team of 4, I am the project manager and one of 2 front end developers. As project manager, I organized all team meetings, facilitated delegations of tasks with the help of Trello, and kept the team on track. As a front end developer, I designed both the mobile and desktop interfaces using Figma and developed the interfaces using React, Typescript, and CSS.</p>
+          <ul>
+            <li>Project manager on a team of 4</li>
+            <li>Designed the application with Figma</li>
+            <li>Developed the front end using React, TypeScript, and CSS</li>
+          </ul>
         </div>
-        <div className='rq-desc'>
+        <div className='rq-desc small-rq-desc'>
           <h3>Problem Statement</h3>
-          <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;DJs often face challenges while managing song requests at live events, as traditional methods like verbal communication or handwritten notes can be disorganized, leading to misunderstandings and missed requests. With the growing demand for personalized music, a digital platform for song requests could streamline interactions, enhance the audience's experience, and support the success of DJs and venues by providing a structured, efficient solution. </p>
+          <p>Interactions between DJs and venue patrons are often disorganized and inefficient. So as the demand for personalized music rises, so does the need for a platform to streamline these interactions.</p>
         </div>
-        <div className='rq-desc'>
-          <h3>Related Work</h3>
-          <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Several existing applications, such as RequestNow, limeDJ, and QueueDJ, offer similar functionality but each has limitations. These limitations include having to download an app, requiring payment to request songs, and queues that aren’t interactive. These limitations discourage participation among users leaving room for Requestify to offer a more innovative and user-friendly alternative.</p>
+        <div className='rq-desc small-rq-desc'>
+          <h3>But wait... doesn't this already exist?</h3>
+          <p>Well yes, existing applications such as RequestNow, limeDJ, and QueueDJ, offer similar functionality but have their limitations:</p>
+          <p><b>Downloading an app:</b> If I’m out with my friends I’m not going to want to wait forever for an app to install!</p>
+          <p><b>Payment to request songs:</b> I’m already paying for my drinks, why should I have to pay to request a song?</p>
+          <p><b>Non-interactive queues:</b> No one’s going to want to hear that overplayed song from 2012...</p>
         </div>
         <img
           src="../assets/Solution Graphic.png"
@@ -70,14 +100,15 @@ const Requestify: React.FC = () => {
           className="solution-graphic"
           onClick={() => openModal('../assets/Solution Graphic.png')}
         />
+        </div>
+
         <div className='rq-desc'>
-          <h3>Solution</h3>
-          <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Several existing applications, such as RequestNow, limeDJ, and QueueDJ, offer similar functionality but each has limitations. These limitations include having to download an app, requiring payment to request songs, and queues that aren’t interactive. These limitations discourage participation among users leaving room for Requestify to offer a more innovative and user-friendly alternative.</p>
-          <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;This audience interactivity empowers individuals to interact with the song selection while providing a new revenue source for the DJ. These integral features are why Requestify is the solution to DJ-audience interaction.</p>
+          <h3>The Solution</h3>
+          <p>Requestify is a web application designed to simplify the song request process. Users at a venue can send song requests directly to the DJ, vote on songs in the queue, and send tips anonymously to DJs. The DJ can view these polls and add songs to their playlist based on the user feedback. This audience interactivity empowers individuals to interact with the song selection while providing a new revenue source for the DJ.</p>
         </div>
         <div className='rq-desc'>
-          <h3>Wireframe</h3>
-          <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;The wireframing for this application was done using Figma and underwent six potential end-user interviews during three sprints to refine it and iterate through designs. As a product of these interviews, the team introduced features such as the “Clear Queue” button, song history, and submission confirmation when requesting a song.</p>
+          <h3>Wireframing</h3>
+          <p>The wireframing for this application was done using Figma and underwent six potential end-user interviews during three sprints to refine it and iterate through designs.</p>
         </div>
         <img
           src="../assets/Wireframe graphic Mobile.png"
@@ -85,15 +116,17 @@ const Requestify: React.FC = () => {
           className="wireframe-graphic"
           onClick={() => openModal('../assets/Wireframe graphic Mobile.png')}
         />
+        <i>Mobile Wireframes</i>
         <img
           src="../assets/Wireframe graphic Desktop.png"
           alt="Wireframe Desktop Graphic"
           className="wireframe-graphic"
           onClick={() => openModal('../assets/Wireframe graphic Desktop.png')}
         />
+        <i>Desktop Wireframes</i>
         <div className='rq-desc'>
           <h3>How It Works</h3>
-          <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;The following software architecture diagram, made in draw.io, serves to visualize how the system works and serves both user types in an safe, efficient way.</p>
+          <p>The following software architecture diagram, made in draw.io, serves to visualize how the system works and serves both user types in an safe, efficient way.</p>
         </div>
         <img
           src="../assets/SAD.png"
@@ -101,8 +134,9 @@ const Requestify: React.FC = () => {
           className="wireframe-graphic"
           onClick={() => openModal('../assets/SAD.png')}
         />
-        
-        <div className='rq-desc'>
+        <i>Software Architecture Diagram</i>
+        <div className='rq-wrap'>
+        <div className='rq-desc small-rq-desc'>
           <h3>Tech Stack</h3>
           <div className='table-container'>
             <div className="table">
@@ -119,13 +153,15 @@ const Requestify: React.FC = () => {
           </div>
         </div>
 
-        <div className='rq-desc'>
-          <h3>Issues</h3>
-          <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Throughout this process, we had issues to overcome as the we had never created a full application before. Examples of these issues include connecting the Stripe API, figuring out how to support real-time queue updates, and getting the application deployment-ready. These issues were solved by working together and researching solutions in order to create a fully-working product.</p>
+        <div className='rq-desc small-rq-desc'>
+          <h3>What went wrong?</h3>
+          <p>Some issues included connecting the Stripe API, figuring out how to support real-time queue updates, and getting the application deployment-ready. These issues stemmed from this project being a learning experience, but were solved by working together and researching solutions in order to create a fully-functioning product.
+          </p>
+        </div>
         </div>
         <div className='rq-desc'>
           <h3>Final Product</h3>
-          <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;The final product developed is a ready-to-deploy web application using the above tech stack and tested via demos and end-to-end testing. </p>
+          <p>The final product developed is a ready-to-deploy web application using the above tech stack and tested via demos and end-to-end testing.</p>
         </div>
         <img
           src="../assets/RQ Graphic Mobile.png"
@@ -133,37 +169,42 @@ const Requestify: React.FC = () => {
           className="wireframe-graphic"
           onClick={() => openModal('../assets/RQ Graphic Mobile.png')}
         />
+        <i>Mobile Interfaces</i>
         <img
           src="../assets/Dashboard.png"
           alt="Final Desktop Graphic"
           className="wireframe-graphic"
           onClick={() => openModal('../assets/Dashboard.png')}
         />
+        <i>Desktop Dashboard</i>
         <img
           src="../assets/Message.png"
           alt="Final Desktop Graphic"
           className="wireframe-graphic"
           onClick={() => openModal('../assets/Message.png')}
         />
+        <i>Desktop Message Popup</i>
         <img
           src="../assets/QR.png"
           alt="Final Desktop Graphic"
           className="wireframe-graphic"
           onClick={() => openModal('../assets/QR.png')}
         />
+        <i>Desktop QR Code Popup</i>
         <img
           src="../assets/Profile.png"
           alt="Final Desktop Graphic"
           className="wireframe-graphic"
           onClick={() => openModal('../assets/Profile.png')}
         />
+        <i>Desktop Profile Popup</i>
         <img
           src="../assets/History.png"
           alt="Final Desktop Graphic"
           className="wireframe-graphic"
           onClick={() => openModal('../assets/History.png')}
         />
-        
+        <i>Desktop History Popup</i>
       </div>
     </div>
 

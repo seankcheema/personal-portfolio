@@ -109,27 +109,87 @@
 .rq-desc-container {
     display: flex;
     flex-direction: column;
-    
+    text-align: center;
+
+
     width: 97%;
+}
+
+.rq-wrap {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 10px;
+}
+
+.rq-desc-container i{
+    font-size: .8rem;
+    color: rgba(255, 255, 255, 0.8);
+    text-align: center;
+    margin-top: -10px;
+    margin-bottom: 20px;
 }
 
 .rq-desc-container img {
     margin-top: 20px;
 }
 
+.rq-desc {
+    text-align: left;
+    margin-top: 25px;
+    margin-bottom: 25px;
+}
+
+.rq-desc,
+.rq-desc-container img {
+  opacity: 0;
+  transform: translateY(50px);
+  transition: all 1s ease;
+}
+
+.rq-desc-container i {
+    opacity: 0;
+    transform: translateY(50px);
+    transition: all 0.5s ease;
+}
+
+.rq-desc.slide-up,
+.rq-desc-container img.slide-up,
+.rq-desc-container i.slide-up {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+li {
+    font-size: 1.1rem;
+}
+
+.rq-desc b {
+    font-weight: normal;
+    color: #38B45D;
+}
+
+.small-rq-desc {
+    width: 450px;
+}
+
 .rq-desc h3 {
     color: #38B45D;
     margin-top: 10px; /* Remove top margin */
-    font-size: 1.5rem; /* Adjust font size */
+    font-size: 1.3rem; /* Adjust font size */
     margin-bottom: 0;
+    text-align: left;
 }
 
 .rq-desc p {
     font-size: 1.1rem;
+    text-align: left;
+    margin-top: 10px; /* Remove top margin */
 }
 
 .solution-graphic{
-    width: 50%;
+    width: 450px;
     align-self: center;
 }
 
@@ -141,14 +201,12 @@
 
 .table-container {
     display: flex;
-    justify-content: center;
-    align-items: center;
     margin-top: 10px;
     margin-bottom: 20px;
 }
 
 .table {
-    align-self: center;
+
     display: flex;
     flex-direction: column;
     background-color: #1c1c1c; /* Dark background */
@@ -227,6 +285,22 @@
 @media (max-width: 450px) {
     .rq-header{
         flex-direction: column-reverse;
+    }
+    .solution-graphic{
+        width: 100%;
+    }
+
+    .small-rq-desc {
+        width: 100%;
+    }
+
+    .rq-desc {
+        margin-bottom: 10px;
+        margin-top: 10px;
+    }
+
+    .rq-desc-container img {
+        width: 100%;
     }
 
     .rq-header img {

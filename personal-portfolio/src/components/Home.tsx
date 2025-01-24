@@ -90,7 +90,7 @@ const Home: React.FC = () => {
             <h3>Requestify</h3>
             <i>2024</i>
             <hr/>
-            <p>A music request web app providing a medium between DJs and venue patrons.</p>
+            <p>Streamlining the way DJs and venue patrons interact.</p>
             <div className='links rq-links'>
               <a href="requestify">
                 View Project

@@ -1,4 +1,4 @@
-import React, { useRef, useState } from "react";
+import React, { useRef, useState, useEffect } from "react";
 import { motion, useMotionValue, useSpring } from "framer-motion";
 import "./TiltedCard.css";
 
@@ -32,6 +32,33 @@ export default function TiltedCard({
   onClick,
 }: TiltedCardProps) {
   const ref = useRef<HTMLDivElement>(null);
+  const [isMobile, setIsMobile] = useState(false);
+
+  // Check if the device is mobile
+  useEffect(() => {
+    setIsMobile(window.innerWidth < 768 || /Mobi|Android/i.test(navigator.userAgent));
+  }, []);
+
+  useEffect(() => {
+      const tiles = document.querySelectorAll(".tilted-card-figure");
+      const observer = new IntersectionObserver(
+        (entries) => {
+          entries.forEach((entry, index) => {
+            if (entry.isIntersecting) {
+              const tile = entry.target as HTMLElement;
+              tile.style.transitionDelay = `${index * 0.1}s`; // Adjust delay dynamically
+              tile.classList.add("animate");
+              observer.unobserve(entry.target); // Stop observing once animated
+            }
+          });
+        },
+        { threshold: 0.05 } 
+      );
+  
+      tiles.forEach((tile) => observer.observe(tile));
+  
+      return () => observer.disconnect();
+    }, []);
 
   const x = useMotionValue(0);
   const y = useMotionValue(0);
@@ -48,7 +75,7 @@ export default function TiltedCard({
   const [lastY, setLastY] = useState(0);
 
   function handleMouse(e: React.MouseEvent) {
-    if (!ref.current) return;
+    if (isMobile || !ref.current) return; // Disable motion effects on mobile
 
     const rect = ref.current.getBoundingClientRect();
     const offsetX = e.clientX - rect.left - rect.width / 2;
@@ -69,11 +96,13 @@ export default function TiltedCard({
   }
 
   function handleMouseEnter() {
+    if (isMobile) return;
     scale.set(scaleOnHover);
     opacity.set(1);
   }
 
   function handleMouseLeave() {
+    if (isMobile) return;
     opacity.set(0);
     scale.set(1);
     rotateX.set(0);
@@ -90,17 +119,17 @@ export default function TiltedCard({
       onMouseLeave={handleMouseLeave}
       onClick={onClick}
     >
-      {showMobileWarning && (
+      {showMobileWarning && isMobile && (
         <div className="tilted-card-mobile-alert">
-          This effect is not optimized for mobile. Check on desktop.
+          This effect is disabled on mobile for a better experience.
         </div>
       )}
 
       <motion.div
         className="tilted-card-inner"
         style={{
-          rotateX,
-          rotateY,
+          rotateX: isMobile ? 0 : rotateX,
+          rotateY: isMobile ? 0 : rotateY,
           scale,
         }}
       >
@@ -118,7 +147,7 @@ export default function TiltedCard({
         )}
       </motion.div>
 
-      {showTooltip && (
+      {showTooltip && !isMobile && (
         <motion.figcaption
           className="tilted-card-caption"
           style={{

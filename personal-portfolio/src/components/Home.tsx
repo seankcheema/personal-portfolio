@@ -99,7 +99,7 @@ const Home: React.FC = () => {
                 <h3>Requestify</h3>
                 <i>2024</i>
                 <hr/>
-                <p>A music request web app providing a medium between DJs and venue patrons.</p>
+                <p>Streamlining the way DJs and venue patrons interact.</p>
                 <div className='links rq-links'>
                   <a href="requestify">
                     View Project
@@ -123,7 +123,7 @@ const Home: React.FC = () => {
             <h3>TAAS Redesign</h3>
             <i>2024</i>
             <hr/>
-            <p>Revamping the UI/UX of a subpar TA application website supplied by UF.</p>
+            <p>Revamping the UI/UX of a subpar application system.</p>
             <div className='links taas-links'>
               <a href="taas">
                 View Project

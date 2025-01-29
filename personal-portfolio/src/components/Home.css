@@ -341,11 +341,7 @@ footer p {
     color: #1C61FF; /* Change text color on hover */
 }
 
-.dmapp-links {
-    margin-top: 10px;
-}
-
-.dmweb-links {
+.links {
     margin-top: 10px;
 }
 
@@ -363,10 +359,23 @@ footer p {
 
 
 @media (max-width: 450px) {
+    .project a, .project b, .project i, .project p, .about-me p, .about-me b, .social p {
+        font-size: 1.1rem; /* Adjust font size */
+    }
+
+    .project h3, .about-me h3 {
+        font-size: 1.5rem; /* Adjust font size */
+    }
     .project {
         width: 100% !important; /* Each tile takes up the full width on mobile */
         max-width: 100%;
         min-width: 100%;
+        min-height: 0px;
+    }
+
+    .project hr {
+        margin-top: 10px;
+        margin-bottom: 10px;
     }
 
     .content {

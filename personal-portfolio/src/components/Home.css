@@ -143,19 +143,11 @@ footer p {
 
 /* Project tiles */
 .project {
-    background: #1e1e1e; /* Dark background color */
-    border-radius: 10px; /* Round the edges */
-    border: rgba(255, 255, 255, 0.1) 1px solid; /* White border with 20% opacity */
-    flex: 0 0 calc(50% - 20px); /* Take up 45% width minus half the gap for both sides */
-    min-width: 425px;
-    padding: 20px; /* Add padding for spacing */
-    min-height: 550px; /* Consistent height */
+    width: 100%; /* Each tile takes up the full width */
+    min-height: 470px; /* Each tile takes up the full height */
     display: flex; /* Flexbox layout */
     flex-direction: column; /* Stack items vertically */
-    box-sizing: border-box; /* Include padding and border in width calculation */
-    transform: translateY(100px); /* Start tiles slightly below their final position */
-    /* transition: transform 1s ease; Smooth animation */
-    transition: all 1s ease;
+    box-sizing: border-box; /* Ensure padding doesn't cause overflow */
 }
 
 .project.visible {
@@ -183,7 +175,7 @@ footer p {
 
 /* Adjust heights for specific tiles */
 .dmweb-project, .dmapp-project {
-    min-height: 600px;
+    min-height: 510px;
 }
 /* Adjust heights for specific tiles */
 .dmweb-links , .dmapp-links {
@@ -192,6 +184,13 @@ footer p {
 
 .internship-project {
     min-height: 250px;
+    flex: 0 0 calc(50% - 20px); /* Take up 45% width minus half the gap for both sides */
+    border-radius: 10px; /* Round the edges */
+    border: rgba(255, 255, 255, 0.1) 1px solid; /* White border with 20% opacity */
+    padding: 20px; /* Add padding for spacing */
+    transform: translateY(100px); /* Start tiles slightly below their final position */
+    background-color: #1e1e1e;
+    transition: all 1s ease;
 }
 
 
@@ -290,22 +289,6 @@ footer p {
     margin-top: 0px;
 }
 
-.rq-project {
-    background-color: #1F2220;
-}
-
-.taas-project {
-    background-color: #231F25;
-}
-
-.dmweb-project {
-    background-color: #24211E;
-}
-
-.dmapp-project {
-    background-color: #1E2025;
-}
-
 .project hr {
     opacity: .5;
     margin-top: 20px;
@@ -315,9 +298,8 @@ footer p {
 
 .project img {
     display: block; /* Remove inline-block spacing */
-    width: 100%; /* Make image responsive to container width */
-    height: 50%; /* Maintain aspect ratio */
-    border-radius: 10px; /* Round edges */
+    max-width: 100%; /* Make image responsive to container width */
+    max-height: 250px; /* Maintain aspect ratio */
     object-fit: contain; /* Ensure the whole image fits without cropping */
 }
 
@@ -359,11 +341,7 @@ footer p {
     color: #1C61FF; /* Change text color on hover */
 }
 
-.dmapp-links {
-    margin-top: 10px;
-}
-
-.dmweb-links {
+.links {
     margin-top: 10px;
 }
 
@@ -371,13 +349,8 @@ footer p {
     display: inline-block; /* Ensure arrow is treated as a block */
     margin-left: 8px; /* Space between text and arrow */
     font-size: 20px; /* Adjust arrow size */
-    transition: transform 0.3s ease; /* Smooth animation */
     margin-bottom: 2px;
     font-weight: lighter;
-}
-
-.links a:hover .arrow {
-    transform: translateX(5px); /* Move arrow to the right on hover */
 }
 
 
@@ -386,10 +359,23 @@ footer p {
 
 
 @media (max-width: 450px) {
+    .project a, .project b, .project i, .project p, .about-me p, .about-me b, .social p {
+        font-size: 1.1rem; /* Adjust font size */
+    }
+
+    .project h3, .about-me h3 {
+        font-size: 1.5rem; /* Adjust font size */
+    }
     .project {
         width: 100% !important; /* Each tile takes up the full width on mobile */
         max-width: 100%;
         min-width: 100%;
+        min-height: 0px;
+    }
+
+    .project hr {
+        margin-top: 10px;
+        margin-bottom: 10px;
     }
 
     .content {

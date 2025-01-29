@@ -1,6 +1,7 @@
 import React, { useEffect } from 'react';
 import './Home.css';
 import Header from './Header.tsx';
+import TiltedCard from './TiltedCard.tsx';
 import { useLocation } from 'react-router-dom';
 
 const Home: React.FC = () => {
@@ -85,26 +86,44 @@ const Home: React.FC = () => {
       </div>
 
       <div className='content' id='work'>
-        <div className='project rq-project'>
-            <img src="../assets/Requestify Graphic.png" alt="Requestify" onClick={() => window.location.href = "requestify"} />
-            <h3>Requestify</h3>
-            <i>2024</i>
-            <hr/>
-            <p>Streamlining the way DJs and venue patrons interact.</p>
-            <div className='links rq-links'>
-              <a href="requestify">
-                View Project
-                <span className="arrow">➔</span>
-              </a>
+        <TiltedCard
+          color= "#1F2220"
+          rotateAmplitude={12}
+          scaleOnHover={1.02}
+          showMobileWarning={false}
+          showTooltip={true}
+          displayOverlayContent={true}
+          overlayContent={
+            <div className='project rq-project'>
+                <img src="../assets/Requestify Graphic.png" alt="Requestify"/>
+                <h3>Requestify</h3>
+                <i>2024</i>
+                <hr/>
+                <p>Streamlining the way DJs and venue patrons interact.</p>
+                <div className='links rq-links'>
+                  <a href="requestify">
+                    View Project
+                    <span className="arrow">➔</span>
+                  </a>
+                </div>
             </div>
-        </div>
-
+          }
+          onClick={() => window.location.href = "requestify"}
+          />
+        <TiltedCard
+        color= "#231F25"
+        rotateAmplitude={12}
+        scaleOnHover={1.02}
+        showMobileWarning={false}
+        showTooltip={true}
+        displayOverlayContent={true}
+        overlayContent={
         <div className='project taas-project'>
-            <img src="../assets/TAAS Graphic.png" alt="TAAS" onClick={() => window.location.href = "taas"}/>
+            <img src="../assets/TAAS Graphic.png" alt="TAAS" />
             <h3>TAAS Redesign</h3>
             <i>2024</i>
             <hr/>
-            <p>Revamping the UI/UX of a subpar TA application website supplied by UF.</p>
+            <p>Revamping the UI/UX of a subpar application system.</p>
             <div className='links taas-links'>
               <a href="taas">
                 View Project
@@ -112,34 +131,59 @@ const Home: React.FC = () => {
               </a>
             </div>
         </div>
+        }
+        onClick={() => window.location.href = "taas"}
+        />
 
-        <div className='project dmweb-project'>
-            <img src="../assets/DM Website Graphic.png" alt="DM Website" onClick={() => window.open("https://floridadm.org/", "_blank")}/>
-            <h3>Dance Marathon Website</h3>
-            <i>2024 - Present</i>
-            <hr/>
-            <p>Contributing to the UI/UX of the Dance Marathon website to raise awareness about their cause of supporting UF Health Shands Children’s Hospital.</p>
-            <div className='links dmweb-links'>
-              <a href="https://floridadm.org/" target="_blank" rel="noopener noreferrer">
-                Visit the Website
-                <span className="arrow">➔</span>
-              </a>
-            </div>
-        </div>
+        <TiltedCard
+        color= "#24211E"
+        rotateAmplitude={12}
+        scaleOnHover={1.02}
+        showMobileWarning={false}
+        showTooltip={true}
+        displayOverlayContent={true}
+        overlayContent={
+          <div className='project dmweb-project'>
+              <img src="../assets/DM Website Graphic.png" alt="DM Website" />
+              <h3>Dance Marathon Website</h3>
+              <i>2024 - Present</i>
+              <hr/>
+              <p>Contributing to the UI/UX of the Dance Marathon website to raise awareness about their cause of supporting UF Health Shands Children’s Hospital.</p>
+              <div className='links dmweb-links'>
+                <a href="https://floridadm.org/" target="_blank" rel="noopener noreferrer">
+                  Visit the Website
+                  <span className="arrow">➔</span>
+                </a>
+              </div>
+          </div>
+        }
+        onClick={() => window.open("https://floridadm.org/", "_blank")}
+        />
 
-        <div className='project dmapp-project'>
-            <img src="../assets/DM App Graphic.png" alt="DM App" onClick={() => window.open("https://apps.apple.com/us/app/dm-uf/id6480380095", "_blank")}/>
-            <h3>Dance Marathon App</h3>
-            <i>2024 - Present</i>
-            <hr/>
-            <p>Leading the UI redesign and supporting front-end development for an app for internal Dance Marathon members.</p>
-            <div className='links dmapp-links'>
-              <a href="https://apps.apple.com/us/app/dm-uf/id6480380095" target="_blank" rel="noopener noreferrer">
-                Download the App
-                <span className="arrow">➔</span>
-              </a>
-            </div>
-        </div>
+        <TiltedCard
+        color= "#1E2025"
+        rotateAmplitude={12}
+        scaleOnHover={1.02}
+        showMobileWarning={false}
+        showTooltip={true}
+        displayOverlayContent={true}
+        overlayContent={
+          <div className='project dmapp-project'>
+              <img src="../assets/DM App Graphic.png" alt="DM App" />
+              <h3>Dance Marathon App</h3>
+              <i>2024 - Present</i>
+              <hr/>
+              <p>Leading the UI redesign and supporting front-end development for an app for internal Dance Marathon members.</p>
+              <div className='links dmapp-links'>
+                <a href="https://apps.apple.com/us/app/dm-uf/id6480380095" target="_blank" rel="noopener noreferrer">
+                  Download the App
+                  <span className="arrow">➔</span>
+                </a>
+              </div>
+          </div>
+        }
+        onClick={() => window.open("https://apps.apple.com/us/app/dm-uf/id6480380095", "_blank")}
+        />
 
         <div className='project internship-project'>
             <h3>Northrop Grumman</h3>

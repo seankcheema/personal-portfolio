@@ -15,8 +15,8 @@
     flex-grow: 1; /* Make the <hr> take up remaining space */
     border: none;
     border-top: 2px solid white; /* Solid white line */
-    margin-left: 30px;
-    margin-right: 30px; /* Add horizontal margin for spacing */
+    /* margin-left: 30px;
+    margin-right: 30px; Add horizontal margin for spacing */
     border-radius: 10px; /* Round the edges */
 }
 
@@ -25,7 +25,7 @@ header a {
     text-decoration: none; /* Remove underline */
     font-weight: bold; /* Make links bold */
     font-size: 1.1rem; /* Adjust font size */
-    margin-right: 30px; /* Add right margin for spacing */
+    /* margin-right: 30px; Add right margin for spacing */
     transition: transform 0.3s ease;
 }
 
@@ -35,8 +35,10 @@ header {
     align-items: center; /* Vertically center the items */
     justify-content: space-between; /* Space out the items */
     padding: 20px; /* Add some padding for spacing */
-    /* gap: 2.25rem; Space between items */
+    gap: 2.25rem; /* Space between items */
     max-width: 100%;
+    margin-left: 10px;
+    margin-right: 10px;
 }
 
 header a:hover {
@@ -81,7 +83,7 @@ header a:hover {
     text-decoration: none; /* Remove underline */
     color: rgba(255, 255, 255, 1); /* Make links bold */
     font-weight: normal;
-    font-size: 1.3rem; /* Adjust font size */
+    font-size: 1.1rem; /* Adjust font size */
     transition: transform 0.3s ease;
     margin: 0px;
 }
@@ -94,5 +96,9 @@ header a:hover {
     header a:hover {
         transform: none;
         font-weight: normal;
+    }
+
+    header {
+        margin: 0;
     }
 }

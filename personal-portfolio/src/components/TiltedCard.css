@@ -1,7 +1,6 @@
 .tilted-card-figure {
     margin: 0;
     flex: 0 0 calc(50% - 20px); /* Take up 45% width minus half the gap for both sides */
-    min-width: 460px;
     min-height: 490px; /* Consistent height */
   }
 
@@ -61,6 +60,27 @@
     min-height: 490px; /* Consistent height */
     will-change: transform;
     transform: translateZ(30px);
+  }
+
+  @media (max-width: 450px) {
+    .tilted-card-background {
+        width: 100%;
+        min-width: none;width: 100% !important; /* Each tile takes up the full width on mobile */
+        max-width: 100%;
+        min-width: 100%;
+    }
+
+    .tilted-card-inner {
+        width: 100% !important; /* Each tile takes up the full width on mobile */
+        max-width: 100%;
+        min-width: 100%;
+    }
+
+    .tilted-card-figure {
+        width: 100% !important; /* Each tile takes up the full width on mobile */
+        max-width: 100%;
+        min-width: 100%;
+    }
   }
   
   

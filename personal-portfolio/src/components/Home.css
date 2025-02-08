@@ -32,55 +32,6 @@ h2 {
 
 
 
-footer {
-    display: flex; /* Use flexbox for layout */
-    flex-direction: column; /* Stack <hr> above <a> and <p> */
-    width: 100%; /* Ensure the footer takes the full width */
-    padding: 20px;
-    box-sizing: border-box; /* Ensure padding doesn't cause overflow */
-}
-
-footer hr {
-    width: 100%; /* Make the <hr> span the entire width */
-    border: none;
-    border-top: 2px solid rgba(255, 255, 255, 0.8); /* Solid white line */
-    margin-bottom: 10px; /* Space between <hr> and the text */
-    opacity: 0.8; /* Slight transparency for better aesthetics */
-}
-
-footer .footer-content {
-    display: flex; /* Use flexbox for horizontal layout */
-    justify-content: space-between; /* Push <p> to the left and <a> to the right */
-    width: 100%; /* Ensure both <p> and <a> take full width */
-    box-sizing: border-box; /* Ensure padding doesn't cause overflow */
-    overflow: hidden; /* Prevent any overflow */
-    flex-wrap: wrap; /* Allow items to wrap on smaller screens */
-}
-
-footer a, footer p {
-    color: rgba(255, 255, 255, 0.8); /* White text color */
-    text-decoration: none; /* Remove underline */
-    font-size: 0.9rem; /* Adjust font size */
-    margin: 0; /* Remove any default margins */
-    transition: transform 0.3s ease, color 0.3s ease; /* Smooth transition */
-    max-width: 100%; /* Prevent them from going off-screen */
-    word-wrap: break-word; /* Ensure long words break correctly */
-}
-
-footer a {
-    margin-left: auto; /* Push the link to the right */
-}
-
-footer a:hover {
-    text-decoration: underline; /* Underline the link on hover */
-}
-
-footer p {
-    margin-right: auto; /* Push the paragraph to the left */
-}
-
-
-
 .intro {
     align-items: left; /* Center items horizontally */
     padding: 20px; /* Add padding for spacing */
@@ -345,18 +296,14 @@ footer p {
     margin-top: 10px;
 }
 
-.arrow {
+.home-arrow {
     display: inline-block; /* Ensure arrow is treated as a block */
     margin-left: 8px; /* Space between text and arrow */
     font-size: 20px; /* Adjust arrow size */
     margin-bottom: 2px;
+    transition: transform 0.3s ease;
     font-weight: lighter;
 }
-
-
-
-
-
 
 @media (max-width: 450px) {
     .project a, .project b, .project i, .project p, .about-me p, .about-me b, .social p {
@@ -411,6 +358,12 @@ footer p {
 
     footer a, footer p {
         font-size: .5rem;
+    }
+
+    .footer-icon {
+        width: .7rem;
+        height: .7rem;
+        margin-left: 2px;
     }
 
     .content {

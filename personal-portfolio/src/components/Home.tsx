@@ -3,6 +3,7 @@ import './Home.css';
 import Header from './Header.tsx';
 import TiltedCard from './TiltedCard.tsx';
 import { useLocation } from 'react-router-dom';
+import Footer from './Footer.tsx';
 
 const Home: React.FC = () => {
   const location = useLocation();
@@ -103,7 +104,7 @@ const Home: React.FC = () => {
                 <div className='links rq-links'>
                   <a href="requestify">
                     View Project
-                    <span className="arrow">➔</span>
+                    <span className="home-arrow">➔</span>
                   </a>
                 </div>
             </div>
@@ -127,7 +128,7 @@ const Home: React.FC = () => {
             <div className='links taas-links'>
               <a href="taas">
                 View Project
-                <span className="arrow">➔</span>
+                <span className="home-arrow">➔</span>
               </a>
             </div>
         </div>
@@ -152,7 +153,7 @@ const Home: React.FC = () => {
               <div className='links dmweb-links'>
                 <a href="https://floridadm.org/" target="_blank" rel="noopener noreferrer">
                   Visit the Website
-                  <span className="arrow">➔</span>
+                  <span className="home-arrow">➔</span>
                 </a>
               </div>
           </div>
@@ -177,7 +178,7 @@ const Home: React.FC = () => {
               <div className='links dmapp-links'>
                 <a href="https://apps.apple.com/us/app/dm-uf/id6480380095" target="_blank" rel="noopener noreferrer">
                   Download the App
-                  <span className="arrow">➔</span>
+                  <span className="home-arrow">➔</span>
                 </a>
               </div>
           </div>
@@ -250,13 +251,7 @@ const Home: React.FC = () => {
       
         
     </div>
-    <footer>
-      <hr />
-      <div className='footer-content'>
-        <p>© {new Date().getFullYear()} Sean Cheema. All rights reserved.</p>
-        <a href='https://www.figma.com/design/80hfYLnBW5X04TaBP7YxsE/Personal-Portfolio?node-id=0-1&t=DsKoGwff1gYkNICI-1' target="_blank" rel="noopener noreferrer">View Figma for this site</a>
-      </div>
-    </footer>
+    <Footer />
     </div>
   );
 };

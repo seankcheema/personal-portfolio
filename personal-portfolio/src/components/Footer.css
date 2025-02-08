@@ -1,0 +1,76 @@
+footer {
+    display: flex; /* Use flexbox for layout */
+    flex-direction: column; /* Stack <hr> above <a> and <p> */
+    width: 100%; /* Ensure the footer takes the full width */
+    padding: 20px;
+    box-sizing: border-box; /* Ensure padding doesn't cause overflow */
+}
+
+footer hr {
+    width: 100%; /* Make the <hr> span the entire width */
+    border: none;
+    border-top: 2px solid rgba(255, 255, 255, 0.8); /* Solid white line */
+    margin-bottom: 10px; /* Space between <hr> and the text */
+    opacity: 0.8; /* Slight transparency for better aesthetics */
+}
+
+footer .footer-content {
+    display: flex; /* Use flexbox for horizontal layout */
+    justify-content: space-between; /* Push <p> to the left and <a> to the right */
+    width: 100%; /* Ensure both <p> and <a> take full width */
+    box-sizing: border-box; /* Ensure padding doesn't cause overflow */
+    overflow: hidden; /* Prevent any overflow */
+    flex-wrap: wrap; /* Allow items to wrap on smaller screens */
+}
+
+footer a, footer p {
+    color: rgba(255, 255, 255, 0.8); /* White text color */
+    text-decoration: none; /* Remove underline */
+    font-size: 0.9rem; /* Adjust font size */
+    margin: 0; /* Remove any default margins */
+    transition: transform 0.3s ease, color 0.3s ease; /* Smooth transition */
+    max-width: 100%; /* Prevent them from going off-screen */
+    word-wrap: break-word; /* Ensure long words break correctly */
+}
+
+footer a{
+    display: flex;
+    flex-direction: row;
+}
+
+.footer-right {
+    margin-left: auto; /* Push the link to the right */
+   display: flex;
+   flex-direction: row;
+}
+
+.footer-icon {
+    margin-left: 5px;
+    width: 1.1rem;
+    height: 1.1rem;
+    color: white;
+}
+
+footer a:hover {
+    text-decoration: underline; /* Underline the link on hover */
+}
+
+footer p {
+    margin-right: auto; /* Push the paragraph to the left */
+}
+
+@media (max-width: 450px) {
+    footer a, footer p {
+        font-size: .6rem;
+    }
+
+    .footer-icon {
+        width: .8rem;
+        height: .8rem;
+        margin-left: 2px;
+    }
+
+    footer hr {
+        margin-bottom: 5px;
+    }
+}

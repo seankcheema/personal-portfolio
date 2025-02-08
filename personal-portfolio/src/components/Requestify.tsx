@@ -1,6 +1,7 @@
 import React, {useState, useEffect} from 'react';
 import './Requestify.css';
 import Header from './Header.tsx';
+import Footer from './Footer.tsx';
 
 const Requestify: React.FC = () => {
   const [modalImage, setModalImage] = useState<string | null>(null);
@@ -220,13 +221,7 @@ const Requestify: React.FC = () => {
           </div>
         )}
   </div>
-  <footer>
-    <hr />
-    <div className='footer-content'>
-      <p>© {new Date().getFullYear()} Sean Cheema. All rights reserved.</p>
-      <a href='https://www.figma.com/design/80hfYLnBW5X04TaBP7YxsE/Personal-Portfolio?node-id=0-1&t=DsKoGwff1gYkNICI-1' target="_blank" rel="noopener noreferrer">View Figma for this site</a>
-    </div>
-  </footer>
+  <Footer/>
   </div>;
 };
 

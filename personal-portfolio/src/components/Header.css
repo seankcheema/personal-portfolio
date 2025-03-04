@@ -64,7 +64,7 @@ header a:hover::before {
 header {
     position: fixed;
     top: 15px;
-    right: 20px;
+    right: 10px;
     display: flex;
     align-items: center; /* Vertically center the items */
     justify-content: space-between; /* Space out the items */

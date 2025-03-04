@@ -39,8 +39,8 @@ h2 {
     flex-direction: column; /* Stack items vertically */
     max-width: 960px;
     text-align: left;
-    margin-top: 75px;
-    margin-bottom: 75px;
+    margin-top: 150px;
+    margin-bottom: 100px;
 }
 
 .intro b, .about-me b {
@@ -180,13 +180,14 @@ h2 {
     margin-top: 0;
     margin-bottom: 0;
     margin-left: 10px;
-    font-weight: bold;
+    font-weight: normal;
+    font-size: 1.1rem;
     transform: none; /* Prevent scaling effect on the text */
     will-change: unset; /* Prevent reflow for the text */
 }
 
 .social:hover {
-    transform: scale(1.1); /* Scale the container only */
+    transform: scale(1.05); /* Scale the container only */
 }
 
 

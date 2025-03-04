@@ -3,8 +3,8 @@ import { motion, useMotionValue, useSpring } from "framer-motion";
 import "./TiltedCard.css";
 
 const springValues = {
-  damping: 50,
-  stiffness: 150,
+  damping: 100,
+  stiffness: 200,
   mass: 10,
 };
 

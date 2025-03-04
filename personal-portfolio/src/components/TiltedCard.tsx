@@ -3,9 +3,9 @@ import { motion, useMotionValue, useSpring } from "framer-motion";
 import "./TiltedCard.css";
 
 const springValues = {
-  damping: 30,
-  stiffness: 100,
-  mass: 2,
+  damping: 50,
+  stiffness: 150,
+  mass: 10,
 };
 
 interface TiltedCardProps {

@@ -3,10 +3,10 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  background-color: #1e1e1e;
-  border-radius: 10px;
+  background-color: rgba(11,11,11, .9);
+  border-radius: 50px;
   border: 1px solid rgba(255, 255, 255, .2);
-  padding: 10px;
+  padding: 10px 15px;
   position: fixed;
   bottom: 60px;
   right: 20px;
@@ -30,7 +30,7 @@
 }
 
 .back-to-top:hover {
-  transform: scale(1.1);
+  transform: scale(1.05);
 }
 
 .back-to-top:active {
@@ -41,6 +41,7 @@
   .back-to-top {
     bottom: 50px;
     right: 10px;
+    transform: scale(0.9);
   }
 }
   

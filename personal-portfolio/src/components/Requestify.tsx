@@ -108,8 +108,8 @@ const Requestify: React.FC = () => {
           <p>Requestify is a web application designed to simplify the song request process. Users at a venue can send song requests directly to the DJ, vote on songs in the queue, and send tips anonymously to DJs. The DJ can view these polls and add songs to their playlist based on the user feedback. This audience interactivity empowers individuals to interact with the song selection while providing a new revenue source for the DJ.</p>
         </div>
         <div className='rq-desc'>
-          <h3>Wireframing</h3>
-          <p>The wireframing for this application was done using Figma and underwent six potential end-user interviews during three sprints to refine it and iterate through designs.</p>
+          <h3>Prototyping</h3>
+          <p>The prototyping for this application was done using Figma and underwent six potential end-user interviews during three sprints to refine it and iterate through designs.</p>
         </div>
         <img
           src="../assets/Wireframe graphic Mobile.png"
@@ -117,14 +117,14 @@ const Requestify: React.FC = () => {
           className="wireframe-graphic"
           onClick={() => openModal('../assets/Wireframe graphic Mobile.png')}
         />
-        <i>Mobile Wireframes</i>
+        <i>Mobile Prototyping</i>
         <img
           src="../assets/Wireframe graphic Desktop.png"
           alt="Wireframe Desktop Graphic"
           className="wireframe-graphic"
           onClick={() => openModal('../assets/Wireframe graphic Desktop.png')}
         />
-        <i>Desktop Wireframes</i>
+        <i>Desktop Prototyping</i>
         <div className='rq-desc'>
           <h3>How It Works</h3>
           <p>The following software architecture diagram, made in draw.io, serves to visualize how the system works and serves both user types in an safe, efficient way.</p>

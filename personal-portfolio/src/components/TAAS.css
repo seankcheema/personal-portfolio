@@ -42,6 +42,10 @@
 .taas-info {
     margin-top: 0px;
     margin-bottom: 0px;
+
+    height: 100%;
+    display: flex;
+    flex-direction: column;
 }
 
 .li {
@@ -93,12 +97,6 @@
     object-fit: contain; /* Ensure the whole image fits without cropping */
 }
 
-.taas-info .links {
-    display: flex;
-    flex-direction: column; /* Stack links vertically */
-    margin-top: 10px; /* Push links container to the bottom */
-  }
-  
 
 .taas-info .links a {
     margin-top: 0px;
@@ -157,7 +155,6 @@
 
 .taas-desc {
     text-align: left;
-    margin-top: 25px;
     margin-bottom: 25px;
 }
 

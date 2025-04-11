@@ -87,6 +87,31 @@ const Home: React.FC = () => {
       </div>
 
       <div className='content' id='work'>
+      <TiltedCard
+          color= "#251F1F"
+          rotateAmplitude={12}
+          scaleOnHover={1.02}
+          showMobileWarning={false}
+          showTooltip={true}
+          displayOverlayContent={true}
+          overlayContent={
+            <div className='project fr-project'>
+                <img src="../assets/FrontRunner Graphic.png" alt="FrontRunner"/>
+                <h3>FrontRunner</h3>
+                <i>2025</i>
+                <hr/>
+                <p>Creating a unified business platform for small artisan businesses.</p>
+                <div className='links fr-links'>
+                  <a href="frontrunner">
+                    View Project
+                    <span className="home-arrow">➔</span>
+                  </a>
+                </div>
+            </div>
+          }
+          onClick={() => window.location.href = "frontrunner"}
+          />
+
         <TiltedCard
           color= "#1F2220"
           rotateAmplitude={12}
@@ -137,31 +162,6 @@ const Home: React.FC = () => {
         />
 
         <TiltedCard
-        color= "#24211E"
-        rotateAmplitude={12}
-        scaleOnHover={1.02}
-        showMobileWarning={false}
-        showTooltip={true}
-        displayOverlayContent={true}
-        overlayContent={
-          <div className='project dmweb-project'>
-              <img src="../assets/DM Website Graphic.png" alt="DM Website" />
-              <h3>Dance Marathon Website</h3>
-              <i>2024 - Present</i>
-              <hr/>
-              <p>Contributing to the UI/UX of the Dance Marathon website to raise awareness about their cause of supporting UF Health Shands Children’s Hospital.</p>
-              <div className='links dmweb-links'>
-                <a href="https://floridadm.org/" target="_blank" rel="noopener noreferrer">
-                  Visit the Website
-                  <span className="home-arrow">➔</span>
-                </a>
-              </div>
-          </div>
-        }
-        onClick={() => window.open("https://floridadm.org/", "_blank")}
-        />
-
-        <TiltedCard
         color= "#1E2025"
         rotateAmplitude={12}
         scaleOnHover={1.02}
@@ -171,19 +171,19 @@ const Home: React.FC = () => {
         overlayContent={
           <div className='project dmapp-project'>
               <img src="../assets/DM App Graphic.png" alt="DM App" />
-              <h3>Dance Marathon App</h3>
-              <i>2024 - Present</i>
+              <h3>Dance Marathon</h3>
+              <i>2024 - 2025</i>
               <hr/>
-              <p>Leading the UI redesign and supporting front-end development for an app for internal Dance Marathon members.</p>
+              <p>Design and development for an organization that supports children’s health.</p>
               <div className='links dmapp-links'>
-                <a href="https://apps.apple.com/us/app/dm-uf/id6480380095" target="_blank" rel="noopener noreferrer">
-                  Download the App
+                <a href="dance-marathon">
+                  View More
                   <span className="home-arrow">➔</span>
                 </a>
               </div>
           </div>
         }
-        onClick={() => window.open("https://apps.apple.com/us/app/dm-uf/id6480380095", "_blank")}
+        onClick={() => window.location.href = "dance-marathon"}
         />
 
         <div className='project internship-project'>
@@ -204,7 +204,7 @@ const Home: React.FC = () => {
 
         <div className='about-me' id='about'>
           <h3>About Me</h3>
-          <p>I am a Master’s student at the University of Florida obtaining a degree in Computer Science with a focus in Human-Centered Computing seeking a <b>Summer 2025 internship</b> in the fields of <b>UI/UX Design</b>, <b>Product Design</b>, and <b>Front End Development</b>.</p>
+          <p>I am a Master’s student at the University of Florida obtaining a degree in Computer Science with a focus in Human-Centered Computing seeking a full-time position in the fields of <b>UI/UX Design</b>, <b>Product Design</b>, and <b>Front End Development</b>.</p>
           <p>What got me interested in this field was the user-facing aspect. I was never super into the hardcore data structures and algorithms concepts and found more excitement in talking to people to find out their needs. By completing projects where I got to see end users' joy while using a product tailored to them, I found my purpose in the field of Computer Science.</p>
           <p>Outside of my work, I have earned a black belt in Isshinryu Karate and I love cooking, finding new coffee spots, listening to music, cars, and spending time with family and friends.</p>
           <div className="socials">

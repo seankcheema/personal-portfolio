@@ -14,7 +14,7 @@
   font-size: 1rem;
   cursor: pointer;
   
-  z-index: 1000;
+  z-index: 500;
   transition: opacity 0.3s, transform 0.3s;
   opacity: 0; /* Start as invisible */
   visibility: hidden; /* Prevent interaction when invisible */

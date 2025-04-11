@@ -95,7 +95,7 @@ h2 {
 /* Project tiles */
 .project {
     width: 100%; /* Each tile takes up the full width */
-    min-height: 470px; /* Each tile takes up the full height */
+    min-height: 500px; /* Each tile takes up the full height */
     display: flex; /* Flexbox layout */
     flex-direction: column; /* Stack items vertically */
     box-sizing: border-box; /* Ensure padding doesn't cause overflow */
@@ -125,9 +125,9 @@ h2 {
 }
 
 /* Adjust heights for specific tiles */
-.dmweb-project, .dmapp-project {
+/* .dmweb-project, .dmapp-project {
     min-height: 510px;
-}
+} */
 /* Adjust heights for specific tiles */
 .dmweb-links , .dmapp-links {
     margin-top: 10px;
@@ -221,6 +221,10 @@ h2 {
     flex-grow: 1;
 }
 
+.fr-project h3 {
+    color: #FF4949;
+}
+
 .rq-project h3 {
     color: #38B45D;
 }
@@ -275,6 +279,10 @@ h2 {
     border-radius: 5px;
     position: relative; /* To position the pseudo-element */
     transition: color 0.3s ease; /* Smooth color transition */
+}
+
+.fr-links a {
+    color: #FF4949;
 }
 
 .rq-links a {

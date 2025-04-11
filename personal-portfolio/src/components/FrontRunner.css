@@ -49,9 +49,12 @@
     transform: translateX(5px); /* Move arrow to the right on hover */
 }
 
+
+
 .fr-info {
-    margin-top: 0px;
-    margin-bottom: 0px;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
 }
 
 .fr-info h3 {
@@ -99,11 +102,7 @@
     object-fit: contain; /* Ensure the whole image fits without cropping */
 }
 
-.fr-info .links {
-    display: flex;
-    flex-direction: column; /* Stack links vertically */
-    margin-top: 10px; /* Push links container to the bottom */
-  }
+
   
 
 .fr-info .links a {

@@ -301,9 +301,6 @@ h2 {
     color: #1C61FF; /* Change text color on hover */
 }
 
-.links {
-    margin-top: 10px;
-}
 
 .home-arrow {
     display: inline-block; /* Ensure arrow is treated as a block */
@@ -327,6 +324,10 @@ h2 {
         max-width: 100%;
         min-width: 100%;
         min-height: 0px;
+    }
+
+    .links {
+        margin-top: 20px;
     }
 
     .project hr {

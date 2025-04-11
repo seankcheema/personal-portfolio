@@ -204,7 +204,7 @@ const Home: React.FC = () => {
 
         <div className='about-me' id='about'>
           <h3>About Me</h3>
-          <p>I am a Master’s student at the University of Florida obtaining a degree in Computer Science with a focus in Human-Centered Computing seeking a <b>Summer 2025 internship</b> in the fields of <b>UI/UX Design</b>, <b>Product Design</b>, and <b>Front End Development</b>.</p>
+          <p>I am a Master’s student at the University of Florida obtaining a degree in Computer Science with a focus in Human-Centered Computing seeking a full-time position in the fields of <b>UI/UX Design</b>, <b>Product Design</b>, and <b>Front End Development</b>.</p>
           <p>What got me interested in this field was the user-facing aspect. I was never super into the hardcore data structures and algorithms concepts and found more excitement in talking to people to find out their needs. By completing projects where I got to see end users' joy while using a product tailored to them, I found my purpose in the field of Computer Science.</p>
           <p>Outside of my work, I have earned a black belt in Isshinryu Karate and I love cooking, finding new coffee spots, listening to music, cars, and spending time with family and friends.</p>
           <div className="socials">

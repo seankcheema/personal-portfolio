@@ -54,6 +54,9 @@
     margin-top: 0px;
     margin-bottom: 0px;
     max-width: 50%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
 }
 
 .dm-info h3 {
@@ -112,12 +115,6 @@
     object-fit: contain; /* Ensure the whole image fits without cropping */
 }
 
-.dm-info .links {
-    display: flex;
-    flex-direction: column; /* Stack links vertically */
-    margin-top: 10px; /* Push links container to the bottom */
-  }
-  
 
 .dm-info .links a {
     margin-top: 0px;
@@ -323,10 +320,15 @@ li {
 
 @media (max-width: 960px) {
     .dm-header{
+        height: auto;
         flex-direction: column-reverse;
     }
     .solution-graphic{
         width: 100%;
+    }
+
+    .dm-info {
+        max-width: none;
     }
 
     .small-dm-desc {

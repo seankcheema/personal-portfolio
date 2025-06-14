@@ -104,7 +104,7 @@ const DanceMarathon: React.FC = () => {
           <h3>My Role</h3>
           <p>I served as a Digital Marketing captain in my time with Dance Marathon at UF. What this means is that I supported the development of their app and website. More specifically, I brought User Experience Design and front end development expertise to the table.</p>
           <p>From a philanthropic perspective, I had the utmost pleasure of supporting UF Health Shands Children’s Hospital by raising over $2700 over the course of the year contributing to our organization total of 1.35 million dollars!</p>
-          <p>My year spent with DM at UF was a fantastic experience where I got to use my technical expertise to support such a great cause and I wouldn’t trade it for anything.Below are some pictures taken throughout the year I participated.</p>
+          <p>My year spent with DM at UF was a fantastic experience where I got to use my technical expertise to support such a great cause and I wouldn’t trade it for anything.</p>
           <p>Below are some pictures taken throughout the year I participated.</p>
         </div>
         <img

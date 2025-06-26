@@ -3,10 +3,11 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  background-color: rgba(18,18,18, 0.9);
-  border-radius: 50px;
+  background-color: rgba(18,18,18, 0.7);
   border: 1px solid rgba(255, 255, 255, .1);
   padding: 10px 15px;
+  height: 25px;
+  border-radius: 50px;
   position: fixed;
   bottom: 60px;
   right: 20px;
@@ -18,6 +19,9 @@
   transition: opacity 0.3s, transform 0.3s;
   opacity: 0; /* Start as invisible */
   visibility: hidden; /* Prevent interaction when invisible */
+
+  backdrop-filter: blur(10px); /* Frosted effect */
+    -webkit-backdrop-filter: blur(10px); /* For Safari support */
   }
 
 .back-to-top p {
@@ -30,7 +34,7 @@
 }
 
 .back-to-top:hover {
-  transform: scale(1.04);
+  transform: scale(1.02);
 }
 
 .back-to-top:active {

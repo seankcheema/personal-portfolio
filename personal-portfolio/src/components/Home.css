@@ -152,11 +152,12 @@ h2 {
     flex-wrap: wrap;
     gap: 1.25rem;
     margin-top: 20px;
+    
 }
 
 .social {
     display: flex;
-    /* width: 143px; */
+    width: 100px;
     flex-direction: row;
     border-radius: 10px;
     border: rgba(255, 255, 255, 1) 1px solid;
@@ -165,18 +166,20 @@ h2 {
     justify-content: center;
     align-items: center;
     will-change: transform; /* Prevents reflow during hover */
+    text-decoration: none;
 }
 
 .social img {
     height: 100%; /* Make image responsive to container width */
     width: auto; /* Maintain aspect ratio */
-    max-width: 1.25rem; /* Limit height if necessary */
+    max-width: 1.1rem; /* Limit height if necessary */
     object-fit: contain; /* Ensure the whole image fits without cropping */
     transform: none; /* Prevent scaling effect on the image */
     will-change: unset; /* Prevent reflow for the image */
 }
 
 .social p {
+    color: white;
     margin-top: 0;
     margin-bottom: 0;
     margin-left: 10px;
@@ -187,7 +190,7 @@ h2 {
 }
 
 .social:hover {
-    transform: scale(1.05); /* Scale the container only */
+    transform: scale(1.02); /* Scale the container only */
 }
 
 
@@ -312,8 +315,20 @@ h2 {
 }
 
 @media (max-width: 450px) {
-    .project a, .project b, .project i, .project p, .about-me p, .about-me b, .social p {
+    .project a, .project b, .project i, .project p, .about-me p, .about-me b {
         font-size: 1.1rem; /* Adjust font size */
+    }
+
+    .social p {
+        font-size: 1rem; /* Adjust font size */
+    }
+
+    .social img {
+        max-width: 1rem; /* Limit height if necessary */
+    }
+
+    .socials {
+        gap: 1rem;
     }
 
     .project h3, .about-me h3 {

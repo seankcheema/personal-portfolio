@@ -83,7 +83,7 @@ const Home: React.FC = () => {
     <div className='main-content'>
       <div className="intro">
         <h1>Hi, I'm Sean</h1>
-        <h2>I am a pixel-perfect <b>UI/UX engineer</b>, fascinated by how people interact with technology.</h2>
+        <h2>I am a pixel-perfect <b>UI/UX developer</b>, fascinated by how people interact with technology.</h2>
       </div>
 
       <div className='content' id='work'>
@@ -204,45 +204,42 @@ const Home: React.FC = () => {
 
         <div className='about-me' id='about'>
           <h3>About Me</h3>
-          <p>I am a Master’s student at the University of Florida obtaining a degree in Computer Science with a focus in Human-Centered Computing seeking a full-time position in the fields of <b>UI/UX Design</b>, <b>Product Design</b>, and <b>Front End Development</b>.</p>
-          <p>What got me interested in this field was the user-facing aspect. I was never super into the hardcore data structures and algorithms concepts and found more excitement in talking to people to find out their needs. By completing projects where I got to see end users' joy while using a product tailored to them, I found my purpose in the field of Computer Science.</p>
+          <p>I am a Master’s student at the University of Florida obtaining a degree in Computer Science with a focus in Human-Centered Computing seeking a full-time position in the fields of <b>UI/UX Development</b> and <b>Front End Development</b>.</p>
+          <p>My goal as a computer scientist is to bridge the gap between traditional design and development roles by my applying skills as a developer with my passion for User Experience Design. What got me interested in this field was the user-facing aspect, as I have always been intrigued by how humans interact with technology. By leveraging my development skills, I have been successful in completing projects where I got to see end users' joy while using a product tailored to them.</p>
           <p>Outside of my work, I have earned a black belt in Isshinryu Karate and I love cooking, finding new coffee spots, listening to music, cars, and spending time with family and friends.</p>
           <div className="socials">
-            <div
+            <a
                 className="social"
-                onClick={() => window.open("https://www.linkedin.com/in/sean-cheema/", "_blank")}
+                href="https://www.linkedin.com/in/sean-cheema/"
+                target="_blank" 
+                rel="noopener noreferrer"
                 style={{ cursor: "pointer" }}
             >
                 <img src="../assets/linked in.png" alt="LinkedIn" />
                 <p>LinkedIn</p>
-            </div>
+            </a>
 
-            <div
+            <a
                 className="social"
-                onClick={() => window.open("/files/Sean Cheema Resume.pdf", "_blank")}
+                href= "/files/Sean Cheema Resume.pdf"
+                target="_blank" 
+                rel="noopener noreferrer"
                 style={{ cursor: "pointer" }}
             >
                 <img src="../assets/Document Filled.png" alt="Resume" />
                 <p>Resume</p>
-            </div>
+            </a>
             
-            <div
+            <a
                 className="social"
-                onClick={() => window.open("https://github.com/seankcheema", "_blank")}
+                href="https://github.com/seankcheema"
+                target="_blank" 
+                rel="noopener noreferrer"
                 style={{ cursor: "pointer" }}
             >
                 <img src="../assets/Github.png" alt="GitHub" />
                 <p>GitHub</p>
-            </div>
-
-            <div
-                className="social"
-                onClick={() => window.location.href = "mailto:seankcheema@gmail.com"}
-                style={{ cursor: "pointer" }}
-            >
-                <img src="../assets/Email.png" alt="Email" />
-                <p>Email</p>
-            </div>
+            </a>
         </div>
 
         </div>

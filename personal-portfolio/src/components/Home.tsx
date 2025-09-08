@@ -210,7 +210,7 @@ const Home: React.FC = () => {
               <img src="../assets/AKTS Logo.svg" alt="AKTS Logo" />
               <div className='exp-text'>
                 <h4>Software Engineer Intern</h4>
-                <p>Akoustis Technologies (SpaceX)</p>
+                <p>Akoustis (SpaceX)</p>
               </div>
               <i>2023 - 2024</i>
             </div>

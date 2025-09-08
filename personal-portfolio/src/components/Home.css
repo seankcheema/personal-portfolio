@@ -348,8 +348,16 @@ h2 {
 }
 
 @media (max-width: 450px) {
-    .project a, .project b, .project i, .project p, .about-me p, .about-me b {
+    .project a, .project b, .project i, .project p, .about-me p, .about-me b, .experience h4 {
         font-size: 1.1rem; /* Adjust font size */
+    }
+
+    .experience img {
+        height: 50px; /* Make image responsive to container width */
+    }
+
+    .experience i {
+        display: none;
     }
 
     .social p {

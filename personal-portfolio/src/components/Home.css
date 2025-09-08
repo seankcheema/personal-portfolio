@@ -1,20 +1,25 @@
 html {
     scroll-behavior: smooth;
-  }
+}
 
-  /* get rid of scroll bar */
+/* get rid of scroll bar */
 ::-webkit-scrollbar {
     display: none;
-  }
+}
 
 
 
 .main-content {
-    color: white; /* White text color */
-    align-items: center; /* Center items horizontally */
-    justify-content: center; /* Center items vertically */
-    display: flex; /* Flexbox layout */
-    flex-direction: column; /* Stack items vertically */
+    color: white;
+    /* White text color */
+    align-items: center;
+    /* Center items horizontally */
+    justify-content: center;
+    /* Center items vertically */
+    display: flex;
+    /* Flexbox layout */
+    flex-direction: column;
+    /* Stack items vertically */
 }
 
 h1 {
@@ -33,35 +38,53 @@ h2 {
 
 
 .intro {
-    align-items: left; /* Center items horizontally */
-    padding: 20px; /* Add padding for spacing */
-    display: flex; /* Flexbox layout */
-    flex-direction: column; /* Stack items vertically */
+    align-items: left;
+    /* Center items horizontally */
+    padding: 20px;
+    /* Add padding for spacing */
+    display: flex;
+    /* Flexbox layout */
+    flex-direction: column;
+    /* Stack items vertically */
     max-width: 960px;
     text-align: left;
     margin-top: 150px;
     margin-bottom: 100px;
 }
 
-.intro b, .about-me b {
-    background: linear-gradient(to right, #636CB5, #B46B4B); /* Gradient colors */
-    font-weight: bold; /* Make links bold */
-    background-clip: text; /* Clip background to text */
-    -webkit-background-clip: text; /* Clip background to text */
-    -webkit-text-fill-color: transparent; /* Make text transparent to show gradient */
+.intro b,
+.about-me b {
+    background: linear-gradient(to right, #636CB5, #B46B4B);
+    /* Gradient colors */
+    font-weight: bold;
+    /* Make links bold */
+    background-clip: text;
+    /* Clip background to text */
+    -webkit-background-clip: text;
+    /* Clip background to text */
+    -webkit-text-fill-color: transparent;
+    /* Make text transparent to show gradient */
 }
 
 /* General container styling */
 .content {
-    display: flex; /* Flexbox layout */
-    flex-wrap: wrap; /* Wrap items to next line */
-    gap: 2.5rem; /*Space between items*/
-    justify-content: center; /* Center items horizontally */
-    padding: 20px; /* Add padding for spacing */
+    display: flex;
+    /* Flexbox layout */
+    flex-wrap: wrap;
+    /* Wrap items to next line */
+    gap: 2.5rem;
+    /*Space between items*/
+    justify-content: center;
+    /* Center items horizontally */
+    padding: 20px;
+    /* Add padding for spacing */
     margin-top: 50px;
-    max-width: 960px; /* Restrict content to 60% of the screen width */
-    margin-left: auto; /* Center container */
-    margin-right: auto; /* Center container */
+    max-width: 960px;
+    /* Restrict content to 60% of the screen width */
+    margin-left: auto;
+    /* Center container */
+    margin-right: auto;
+    /* Center container */
 }
 
 /* About Me section */
@@ -71,39 +94,54 @@ h2 {
     margin-bottom: 20px;
     border-radius: 10px;
     background-color: #1e1e1e;
-    border: rgba(255, 255, 255, 0.1) 1px solid; /* White border with 20% opacity */
-    transform: translateY(80px); /* Start tiles slightly below their final position */
-    transition: transform 1s ease; /* Smooth animation */
+    border: rgba(255, 255, 255, 0.1) 1px solid;
+    /* White border with 20% opacity */
+    transform: translateY(80px);
+    /* Start tiles slightly below their final position */
+    transition: transform 1s ease;
+    /* Smooth animation */
 }
 
 .about-me.visible {
-    opacity: 1; /* Make the tile visible */
-    transform: translateY(0); /* Move the tile to its original position */
+    opacity: 1;
+    /* Make the tile visible */
+    transform: translateY(0);
+    /* Move the tile to its original position */
 }
 
 /* About Me section text */
 .about-me h3 {
-    margin-top: 0; /* Remove top margin */
-    font-size: 1.8rem; /* Adjust font size */
+    margin-top: 0;
+    /* Remove top margin */
+    font-size: 1.8rem;
+    /* Adjust font size */
     margin-bottom: 0;
 }
 
 .about-me p {
-    font-size: 1.25rem; /* Adjust font size */
+    font-size: 1.25rem;
+    /* Adjust font size */
 }
 
 /* Project tiles */
 .project {
-    width: 100%; /* Each tile takes up the full width */
-    min-height: 500px; /* Each tile takes up the full height */
-    display: flex; /* Flexbox layout */
-    flex-direction: column; /* Stack items vertically */
-    box-sizing: border-box; /* Ensure padding doesn't cause overflow */
+    width: 100%;
+    /* Each tile takes up the full width */
+    min-height: 500px;
+    /* Each tile takes up the full height */
+    display: flex;
+    /* Flexbox layout */
+    flex-direction: column;
+    /* Stack items vertically */
+    box-sizing: border-box;
+    /* Ensure padding doesn't cause overflow */
 }
 
 .project.visible {
-    opacity: 1; /* Make the tile visible */
-    transform: translateY(0); /* Move the tile to its original position */
+    opacity: 1;
+    /* Make the tile visible */
+    transform: translateY(0);
+    /* Move the tile to its original position */
 }
 
 .project.animate {
@@ -114,12 +152,15 @@ h2 {
 .project:nth-child(1) {
     transition-delay: 0s;
 }
+
 .project:nth-child(2) {
     transition-delay: 0.1s;
 }
+
 .project:nth-child(3) {
     transition-delay: 0.2s;
 }
+
 .project:nth-child(4) {
     transition-delay: 0.3s;
 }
@@ -129,17 +170,23 @@ h2 {
     min-height: 510px;
 } */
 /* Adjust heights for specific tiles */
-.dmweb-links , .dmapp-links {
+.dmweb-links,
+.dmapp-links {
     margin-top: 10px;
 }
 
 .internship-project {
     min-height: 250px;
-    flex: 0 0 calc(50% - 20px); /* Take up 45% width minus half the gap for both sides */
-    border-radius: 10px; /* Round the edges */
-    border: rgba(255, 255, 255, 0.1) 1px solid; /* White border with 20% opacity */
-    padding: 20px; /* Add padding for spacing */
-    transform: translateY(100px); /* Start tiles slightly below their final position */
+    flex: 0 0 calc(50% - 20px);
+    /* Take up 45% width minus half the gap for both sides */
+    border-radius: 10px;
+    /* Round the edges */
+    border: rgba(255, 255, 255, 0.1) 1px solid;
+    /* White border with 20% opacity */
+    padding: 20px;
+    /* Add padding for spacing */
+    transform: translateY(100px);
+    /* Start tiles slightly below their final position */
     background-color: #1e1e1e;
     transition: all 1s ease;
 }
@@ -152,7 +199,7 @@ h2 {
     flex-wrap: wrap;
     gap: 1.25rem;
     margin-top: 20px;
-    
+
 }
 
 .social {
@@ -161,21 +208,28 @@ h2 {
     flex-direction: row;
     border-radius: 10px;
     border: rgba(255, 255, 255, 1) 1px solid;
-    padding:10px;
+    padding: 10px;
     transition: transform 0.3s ease;
     justify-content: center;
     align-items: center;
-    will-change: transform; /* Prevents reflow during hover */
+    will-change: transform;
+    /* Prevents reflow during hover */
     text-decoration: none;
 }
 
 .social img {
-    height: 100%; /* Make image responsive to container width */
-    width: auto; /* Maintain aspect ratio */
-    max-width: 1.1rem; /* Limit height if necessary */
-    object-fit: contain; /* Ensure the whole image fits without cropping */
-    transform: none; /* Prevent scaling effect on the image */
-    will-change: unset; /* Prevent reflow for the image */
+    height: 100%;
+    /* Make image responsive to container width */
+    width: auto;
+    /* Maintain aspect ratio */
+    max-width: 1.1rem;
+    /* Limit height if necessary */
+    object-fit: contain;
+    /* Ensure the whole image fits without cropping */
+    transform: none;
+    /* Prevent scaling effect on the image */
+    will-change: unset;
+    /* Prevent reflow for the image */
 }
 
 .social p {
@@ -185,19 +239,24 @@ h2 {
     margin-left: 10px;
     font-weight: normal;
     font-size: 1.1rem;
-    transform: none; /* Prevent scaling effect on the text */
-    will-change: unset; /* Prevent reflow for the text */
+    transform: none;
+    /* Prevent scaling effect on the text */
+    will-change: unset;
+    /* Prevent reflow for the text */
 }
 
 .social:hover {
-    transform: scale(1.02); /* Scale the container only */
+    transform: scale(1.02);
+    /* Scale the container only */
 }
 
 
 
 .project h3 {
-    margin-top: 10px; /* Remove top margin */
-    font-size: 1.8rem; /* Adjust font size */
+    margin-top: 10px;
+    /* Remove top margin */
+    font-size: 1.8rem;
+    /* Adjust font size */
     margin-bottom: 0;
 }
 
@@ -209,18 +268,24 @@ h2 {
 }
 
 .project b {
-    font-size: 1.25rem; /* Adjust font size */
-    margin-bottom: 5px; /* Add bottom margin */
+    font-size: 1.25rem;
+    /* Adjust font size */
+    margin-bottom: 5px;
+    /* Add bottom margin */
 }
 
 .project i {
-    font-size: 1.25rem; /* Adjust font size */
+    font-size: 1.25rem;
+    /* Adjust font size */
 }
 
 .project p {
-    font-size: 1.25rem; /* Adjust font size */
-    margin-top: 0px; /* Remove top margin */
-    margin-bottom: 0px; /* Remove bottom margin */
+    font-size: 1.25rem;
+    /* Adjust font size */
+    margin-top: 0px;
+    /* Remove top margin */
+    margin-bottom: 0px;
+    /* Remove bottom margin */
     flex-grow: 1;
 }
 
@@ -259,14 +324,19 @@ h2 {
 .experience h4 {
     margin-top: 0;
     margin-bottom: 5px;
-    font-size: 1.25rem; /* Adjust font size */
+    font-size: 1.25rem;
+    /* Adjust font size */
 }
 
 .experience img {
-    height: 75px; /* Make image responsive to container width */
-    width: auto; /* Maintain aspect ratio */
-    max-width: 100%; /* Limit height if necessary */
-    object-fit: contain; /* Ensure the whole image fits without cropping */
+    height: 75px;
+    /* Make image responsive to container width */
+    width: auto;
+    /* Maintain aspect ratio */
+    max-width: 100%;
+    /* Limit height if necessary */
+    object-fit: contain;
+    /* Ensure the whole image fits without cropping */
     border-radius: 10px;
 }
 
@@ -278,7 +348,8 @@ h2 {
 .experience p {
     margin-top: 0;
     margin-bottom: 5px;
-    font-size: 1.25rem; /* Adjust font size */
+    font-size: 1.25rem;
+    /* Adjust font size */
 }
 
 .project hr {
@@ -289,10 +360,14 @@ h2 {
 }
 
 .project img {
-    display: block; /* Remove inline-block spacing */
-    max-width: 100%; /* Make image responsive to container width */
-    max-height: 250px; /* Maintain aspect ratio */
-    object-fit: contain; /* Ensure the whole image fits without cropping */
+    display: block;
+    /* Remove inline-block spacing */
+    max-width: 100%;
+    /* Make image responsive to container width */
+    max-height: 250px;
+    /* Maintain aspect ratio */
+    object-fit: contain;
+    /* Ensure the whole image fits without cropping */
 }
 
 .project img:hover {
@@ -301,20 +376,25 @@ h2 {
 
 .links {
     display: flex;
-    flex-direction: column; /* Stack links vertically */
-    margin-top: auto; /* Push links container to the bottom */
-  }
-  
+    flex-direction: column;
+    /* Stack links vertically */
+    margin-top: auto;
+    /* Push links container to the bottom */
+}
+
 
 .links a {
     display: inline;
-    align-items: center; /* Vertically center the content */
+    align-items: center;
+    /* Vertically center the content */
     text-decoration: none;
     font-weight: bold;
     font-size: 1.25rem;
     border-radius: 5px;
-    position: relative; /* To position the pseudo-element */
-    transition: color 0.3s ease; /* Smooth color transition */
+    position: relative;
+    /* To position the pseudo-element */
+    transition: color 0.3s ease;
+    /* Smooth color transition */
 }
 
 .fr-links a {
@@ -322,38 +402,58 @@ h2 {
 }
 
 .rq-links a {
-    color: #38B45D; /* Change text color on hover */
+    color: #38B45D;
+    /* Change text color on hover */
 }
 
 .taas-links a {
-    color: #D04DFF; /* Change text color on hover */
+    color: #D04DFF;
+    /* Change text color on hover */
 }
 
 .dmweb-links a {
-    color: #F48320; /* Change text color on hover */
+    color: #F48320;
+    /* Change text color on hover */
 }
 
 .dmapp-links a {
-    color: #1C61FF; /* Change text color on hover */
+    color: #1C61FF;
+    /* Change text color on hover */
 }
 
 
 .home-arrow {
-    display: inline-block; /* Ensure arrow is treated as a block */
-    margin-left: 8px; /* Space between text and arrow */
-    font-size: 20px; /* Adjust arrow size */
+    display: inline-block;
+    /* Ensure arrow is treated as a block */
+    margin-left: 8px;
+    /* Space between text and arrow */
+    font-size: 20px;
+    /* Adjust arrow size */
     margin-bottom: 2px;
     transition: transform 0.3s ease;
     font-weight: lighter;
 }
 
 @media (max-width: 450px) {
-    .project a, .project b, .project i, .project p, .about-me p, .about-me b, .experience h4 {
-        font-size: 1.1rem; /* Adjust font size */
+
+    .project a,
+    .project b,
+    .project i,
+    .project p,
+    .about-me p,
+    .about-me b,
+    .experience h4 {
+        font-size: 1.1rem;
+        /* Adjust font size */
+    }
+
+    .content {
+        gap: 1.5rem;
     }
 
     .experience img {
-        height: 50px; /* Make image responsive to container width */
+        height: 50px;
+        /* Make image responsive to container width */
     }
 
     .experience i {
@@ -361,22 +461,28 @@ h2 {
     }
 
     .social p {
-        font-size: 1rem; /* Adjust font size */
+        font-size: 1rem;
+        /* Adjust font size */
     }
 
     .social img {
-        max-width: 1rem; /* Limit height if necessary */
+        max-width: 1rem;
+        /* Limit height if necessary */
     }
 
     .socials {
         gap: 1rem;
     }
 
-    .project h3, .about-me h3 {
-        font-size: 1.5rem; /* Adjust font size */
+    .project h3,
+    .about-me h3 {
+        font-size: 1.5rem;
+        /* Adjust font size */
     }
+
     .project {
-        width: 100% !important; /* Each tile takes up the full width on mobile */
+        width: 100% !important;
+        /* Each tile takes up the full width on mobile */
         max-width: 100%;
         min-width: 100%;
         min-height: 0px;
@@ -396,11 +502,13 @@ h2 {
     }
 
     .intro h1 {
-        font-size: 2rem; /* Adjust font size */
+        font-size: 2rem;
+        /* Adjust font size */
     }
 
     .intro h2 {
-        font-size: 1.25rem; /* Adjust font size */
+        font-size: 1.25rem;
+        /* Adjust font size */
         max-width: 100%;
     }
 
@@ -419,10 +527,11 @@ h2 {
     .portfolio-icon {
         max-width: 40px;
         margin-right: 30px;
-        
+
     }
 
-    footer a, footer p {
+    footer a,
+    footer p {
         font-size: .5rem;
     }
 
@@ -436,6 +545,6 @@ h2 {
         margin-top: 0px;
     }
 
-    
-    
+
+
 }

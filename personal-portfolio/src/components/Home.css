@@ -248,6 +248,39 @@ h2 {
     margin-top: 0px;
 }
 
+.experience {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 1rem;
+    margin-top: 10px;
+}
+
+.experience h4 {
+    margin-top: 0;
+    margin-bottom: 5px;
+    font-size: 1.25rem; /* Adjust font size */
+}
+
+.experience img {
+    height: 75px; /* Make image responsive to container width */
+    width: auto; /* Maintain aspect ratio */
+    max-width: 100%; /* Limit height if necessary */
+    object-fit: contain; /* Ensure the whole image fits without cropping */
+    border-radius: 10px;
+}
+
+.experience i {
+    margin-left: auto;
+    font-size: 1.25rem;
+}
+
+.experience p {
+    margin-top: 0;
+    margin-bottom: 5px;
+    font-size: 1.25rem; /* Adjust font size */
+}
+
 .project hr {
     opacity: .5;
     margin-top: 20px;

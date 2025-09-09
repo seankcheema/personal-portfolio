@@ -187,7 +187,15 @@ const Home: React.FC = () => {
           />
 
           <div className='about-me' id='previous-experience' style={{ marginBottom: '0' }}>
-            <h3>Previous Experience</h3>
+            <h3>Experience</h3>
+            <div className='experience' style={{ marginBlockStart: '1em' }}>
+              <img src="../assets/Fid Logo.jpeg" alt="Fidelity Logo" />
+              <div className='exp-text'>
+                <h4>Associate Software Engineer</h4>
+                <p>Fidelity Investments</p>
+              </div>
+              <i>2026 - Present</i>
+            </div>
             <div className='experience' style={{ marginBlockStart: '1em' }}>
               <img src="../assets/Fid Logo.jpeg" alt="Fidelity Logo" />
               <div className='exp-text'>

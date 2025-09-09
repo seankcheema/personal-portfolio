@@ -196,7 +196,7 @@ const Home: React.FC = () => {
               </div>
               <i>2026 - Present</i>
             </div>
-            <div className='experience' style={{ marginBlockStart: '1em' }}>
+            <div className='experience'>
               <img src="../assets/Fid Logo.jpeg" alt="Fidelity Logo" />
               <div className='exp-text'>
                 <h4>Software Engineer Intern</h4>

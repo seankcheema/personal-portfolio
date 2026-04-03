@@ -224,55 +224,65 @@ const Home: React.FC = () => {
             </div>
           </div>
 
-            <div className='about-me' id='about'>
-              <h3>About Me</h3>
-              <p>I am a Master’s student at the University of Florida obtaining a degree in Computer Science with a focus in Human-Centered Computing seeking a full-time position in the fields of <b>UI/UX Development</b> and <b>Front End Development</b>.</p>
-              <p>My goal as a computer scientist is to bridge the gap between traditional design and development roles by my applying skills as a developer with my passion for User Experience Design. What got me interested in this field was the user-facing aspect, as I have always been intrigued by how humans interact with technology. By leveraging my development skills, I have been successful in completing projects where I got to see end users' joy while using a product tailored to them.</p>
-              <p>Outside of my work, I have earned a black belt in Isshinryu Karate and I love cooking, finding new coffee spots, listening to music, cars, and spending time with family and friends.</p>
-              <div className="socials">
-                <a
-                  className="social"
-                  href="https://www.linkedin.com/in/sean-cheema/"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  style={{ cursor: "pointer" }}
-                >
-                  <img src="../assets/linked in.png" alt="LinkedIn" />
-                  <p>LinkedIn</p>
-                </a>
+          <div className='about-me' id='about'>
+            <h3>About Me</h3>
+            <div className="about-me-container">
+              <img
+                className='about-headshot'
+                src="../assets/headshot.jpg"
+                alt="Sean Cheema headshot"
+              />
+              <div className='about-me-content'>
+                <p style={{ marginTop: "0px" }}>I am a Master’s student at the University of Florida obtaining a degree in Computer Science with a focus in Human-Centered Computing seeking a full-time position in the fields of <b>UI/UX Development</b> and <b>Front End Development</b>.</p>
+                <p>My goal as a computer scientist is to bridge the gap between traditional design and development roles by my applying skills as a developer with my passion for User Experience Design.</p>
+                <p>Outside of my work, I have earned a black belt in Isshinryu Karate and I love cooking, finding new coffee spots, listening to music, cars, and spending time with family and friends.</p>
+                <div className="socials">
+                  <a
+                    className="social"
+                    href="https://www.linkedin.com/in/sean-cheema/"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    style={{ cursor: "pointer" }}
+                  >
+                    <img src="../assets/linked in.png" alt="LinkedIn" />
+                    <p>LinkedIn</p>
+                  </a>
 
-                <a
-                  className="social"
-                  href="/files/Sean Cheema Resume.pdf"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  style={{ cursor: "pointer" }}
-                >
-                  <img src="../assets/Document Filled.png" alt="Resume" />
-                  <p>Resume</p>
-                </a>
+                  <a
+                    className="social"
+                    href="/files/Sean Cheema Resume.pdf"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    style={{ cursor: "pointer" }}
+                  >
+                    <img src="../assets/Document Filled.png" alt="Resume" />
+                    <p>Resume</p>
+                  </a>
 
-                <a
-                  className="social"
-                  href="https://github.com/seankcheema"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  style={{ cursor: "pointer" }}
-                >
-                  <img src="../assets/Github.png" alt="GitHub" />
-                  <p>GitHub</p>
-                </a>
+                  <a
+                    className="social"
+                    href="https://github.com/seankcheema"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    style={{ cursor: "pointer" }}
+                  >
+                    <img src="../assets/Github.png" alt="GitHub" />
+                    <p>GitHub</p>
+                  </a>
+                </div>
               </div>
-
             </div>
+
+
           </div>
-
-
-
         </div>
-        <Footer />
+
+
+
       </div>
-      );
+      <Footer />
+    </div>
+  );
 };
 
-      export default Home;
+export default Home;

@@ -233,7 +233,7 @@ const Home: React.FC = () => {
                 alt="Sean Cheema headshot"
               />
               <div className='about-me-content'>
-                <p style={{ marginTop: "0px" }}>I am a Master’s student at the University of Florida obtaining a degree in Computer Science with a focus in Human-Centered Computing seeking a full-time position in the fields of <b>UI/UX Development</b> and <b>Front End Development</b>.</p>
+                <p style={{ marginTop: "0px" }}>I am a Front End Developer and UI/UX designer recently graduated with Master of Science from the University of Florida in Computer Science with a focus in Human-Centered Computing seeking a full-time position in <b>UI/UX Engineering</b> and <b>Front End Development</b>.</p>
                 <p>My goal as a computer scientist is to bridge the gap between traditional design and development roles by my applying skills as a developer with my passion for User Experience Design.</p>
                 <p>Outside of my work, I have earned a black belt in Isshinryu Karate and I love cooking, finding new coffee spots, listening to music, cars, and spending time with family and friends.</p>
                 <div className="socials">

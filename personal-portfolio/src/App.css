@@ -1,11 +1,44 @@
-@import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,300;0,6..72,400;1,6..72,300;1,6..72,400&family=Geist:wght@400;500&family=Geist+Mono:wght@400&display=swap');
 
+html {
+  /* Stop iOS Safari inflating type when the device rotates to landscape. */
+  -webkit-text-size-adjust: 100%;
+  text-size-adjust: 100%;
+}
 html, body {
-  font-family: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
   margin: 0;
   padding: 0;
-  box-sizing: border-box;
-  background-color: #121212;
-  align-items: center;
-  overflow-x: hidden;
+  background: #1C1A17;
+  color: #F2EFE7;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  /* `clip`, not `hidden`: overflow-x:hidden computes overflow-y to `auto`, which turns
+     body into a scroll container that never scrolls (the document scrolls on html).
+     The sticky header then anchors to something stationary and scrolls away with the
+     page. `clip` contains overflow without creating a scroll container. */
+  overflow-x: clip;
+}
+body {
+  /* Long unbroken strings (URLs, emails) must never widen the page on a phone. */
+  overflow-wrap: break-word;
+}
+*, *::before, *::after { box-sizing: border-box; }
+img, svg, video { max-width: 100%; height: auto; }
+a { color: #F2EFE7; }
+a:hover { color: #F2EFE7; }
+a, button { -webkit-tap-highlight-color: transparent; }
+button { font: inherit; }
+::selection { background: #F2EFE7; color: #1C1A17; }
+::-webkit-scrollbar { display: none; }
+
+/* Keyboard users still need to see where they are. */
+:focus-visible { outline: 2px solid #F2EFE7; outline-offset: 3px; border-radius: 2px; }
+
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    animation-duration: .01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: .01ms !important;
+    scroll-behavior: auto !important;
+  }
 }

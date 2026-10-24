@@ -16,9 +16,16 @@ const projects = [
   links: [{ label: 'View on GitHub', href: 'https://github.com/seankcheema/trading-season' }],
   blocks: [
     pair(
-      S('My Contribution', { list: ['Front end design and development lead on a 5', 'Designed the interfaces for both the client trading app and the internal reporting console', 'Built both Angular front ends, including order history, the portfolio and cash views, light mode and the reporting UI', 'Designed and built Dua, the in-app assistant and guided tour', 'Wrote Vitest and Playwright tests and kept the Jenkins and SonarQube pipeline passing'] }),
+      S('My Contribution', { list: ['Front end design and development lead on a team of 5', 'Designed the interfaces for both the client trading app and the internal reporting console', 'Built both Angular front ends, including order history, the portfolio and cash views, light mode and the reporting UI', 'Designed and built Dua, the in-app assistant and guided tour', 'Wrote Vitest and Playwright tests and kept the Jenkins and SonarQube pipeline passing'] }),
       S('Problem Statement', 'A firm whose clients could only trade through a phone desk wanted a platform where they could sign in, place an order and see it in their holdings with no dealer involved. Without a person checking every trade, the platform itself has to catch mistakes, keep a record that holds up in a dispute, and still feel simple to someone who is not a professional trader.'),
     ),
+    S('Team', 'TradingSeason was built by a team of 5. Thank you to my teammates:',
+      { list: [
+        { label: 'Chris Chang', href: 'https://www.linkedin.com/in/ccchang2003/' },
+        'Mohammed Shoaib',
+        { label: 'Prisca Olose', href: 'https://www.linkedin.com/in/priscaolose/' },
+        { label: 'Soli Ateefa', href: 'https://www.linkedin.com/in/solia/' },
+      ] }),
     S('The Brief', 'The project started from a business requirements specification issued by the program sponsor. It set out 18 numbered requirements, each marked Must, Should or Could, and left the architecture and technology entirely up to the delivery team. The requirements fell into seven areas:',
       { list: ['Identity and access: registration, secure sign-in and time-limited sessions', 'Order placement and execution: validation, pricing at a live quote and atomic fills', 'Positions, cash and statements: holdings, balances and order history', 'Market data and pricing: quotes and an indicative price before submitting', 'Record-keeping and audit: a permanent, attributable record of every trade', 'Reporting and insight: analysis that never competes with live trading', 'Differentiation: one additional capability of our choosing, with a justification'] },
       'Every Jira story was linked to a requirement number, and those numbers are labeled in the code, so progress against the brief could be traced at any point.'),

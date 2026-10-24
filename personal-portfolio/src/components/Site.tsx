@@ -238,7 +238,8 @@ function PaBody({ items }) {
   return items.map((b, i) => {
     const p = { fontFamily: pa.sans, fontSize: 17, lineHeight: 1.65, color: pa.body, margin: '0 0 16px', textWrap: 'pretty' };
     if (typeof b === 'string') return <p key={i} style={p}>{b}</p>;
-    if (b.list) return <ul key={i} style={{ ...p, paddingLeft: 0, listStyle: 'none' }}>{b.list.map((l, j) => <li key={j} style={{ padding: '8px 0', borderTop: `1px solid ${pa.rule}` }}>{l}</li>)}</ul>;
+    // List items are strings, or { label, href } for an item that links out.
+    if (b.list) return <ul key={i} style={{ ...p, paddingLeft: 0, listStyle: 'none' }}>{b.list.map((l, j) => <li key={j} style={{ padding: '8px 0', borderTop: `1px solid ${pa.rule}` }}>{l.href ? <PaLink href={l.href} ext>{l.label}</PaLink> : l}</li>)}</ul>;
     if (b.lead) return <p key={i} style={p}><em style={{ fontFamily: pa.serif, fontSize: 19, color: pa.ink }}>{b.lead}</em> {b.text}</p>;
     if (b.quote) return <blockquote key={i} style={{ margin: '28px 0', fontFamily: pa.serif, fontStyle: 'italic', fontWeight: 300, fontSize: 'clamp(23px, 4vw, 30px)', lineHeight: 1.28, color: pa.ink, paddingLeft: 0 }}>{b.quote}<div style={{ ...paMono, fontStyle: 'normal', marginTop: 12 }}>{b.by}</div></blockquote>;
     if (b.link) return <p key={i} style={p}>{b.link}<PaLink href={b.href} ext>{b.label}</PaLink>.</p>;

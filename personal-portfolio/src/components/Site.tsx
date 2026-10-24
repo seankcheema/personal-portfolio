@@ -284,6 +284,15 @@ function PaCase({ p, go, zoom }) {
         <figcaption style={{ ...paMono, marginTop: 12 }}>{b.caption}{narrow && ' · tap to enlarge'}</figcaption>
       </Reveal>
     );
+    // preload="none" keeps the page light: nothing downloads until the poster is played.
+    if (b.t === 'video') return (
+      <Reveal key={i} as="figure" style={{ margin: '32px 0' }}>
+        <div style={{ background: pa.well, borderRadius: 6, padding: 'clamp(12px,3vw,40px)', display: 'flex', justifyContent: 'center' }}>
+          <video src={b.src} poster={b.poster} controls muted playsInline preload="none" aria-label={b.caption} style={{ width: '100%', display: 'block', borderRadius: 4, background: '#000' }} />
+        </div>
+        <figcaption style={{ ...paMono, marginTop: 12 }}>{b.caption}</figcaption>
+      </Reveal>
+    );
     if (b.t === 'figs') return (
       <Reveal key={i} as="figure" style={{ margin: '32px 0' }}>
         <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(min(100%, 240px), 1fr))', gap: 12 }}>

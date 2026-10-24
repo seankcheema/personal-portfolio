@@ -164,7 +164,7 @@ const projects = [
   ],
 },
 {
-  slug: 'taas', title: 'TAAS Redesign', year: '2024', accent: '#D04DFF', tile: '#2F1A40',
+  slug: 'taas', title: 'TAAS Redesign', year: '2024', accent: '#D04DFF', tile: '#2F1A40', archived: true,
   pitch: 'Revamping the UI/UX of a subpar application system.',
   summary: 'Revamping the UI/UX of a subpar TA application website supplied by UF.',
   image: B + 'TAAS Graphic.png', tags: ['Redesign', 'Evaluation', 'React'],
@@ -241,6 +241,7 @@ const PORTFOLIO: any = {
     { label: 'Resume', href: `${process.env.PUBLIC_URL}/files/Sean Cheema Resume.pdf` },
     { label: 'Email', href: 'mailto:seankcheema@gmail.com' },
   ],
-  projects,
+  // Archived projects keep their content here but get no work row or route.
+  projects: projects.filter((p) => !p.archived),
 };
 export default PORTFOLIO;

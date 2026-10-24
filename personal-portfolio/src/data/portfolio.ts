@@ -11,12 +11,12 @@ const projects = [
 {
   slug: 'trading-season', title: 'TradingSeason', year: '2026', accent: '#00BBFF', tile: '#0E2C3B',
   pitch: 'Leading the design and front end build of a full-stack trading platform with machine learning insights.',
-  summary: 'A direct-to-consumer trading platform built as a team of 4 against a client business requirements specification, where I led front end design and development.',
+  summary: 'A direct-to-consumer trading platform built as a team of 5 against a client business requirements specification, where I led front end design and development.',
   image: B + 'TradingSeason Graphic.png', tags: ['Front end lead', 'Angular', 'Microservices'],
   links: [{ label: 'View on GitHub', href: 'https://github.com/seankcheema/trading-season' }],
   blocks: [
     pair(
-      S('My Contribution', { list: ['Front end design and development lead on a team of 4', 'Designed the interfaces for both the client trading app and the internal reporting console', 'Built both Angular front ends, including order history, the portfolio and cash views, light mode and the reporting UI', 'Designed and built Dua, the in-app assistant and guided tour', 'Wrote Vitest and Playwright tests and kept the Jenkins and SonarQube pipeline passing'] }),
+      S('My Contribution', { list: ['Front end design and development lead on a 5', 'Designed the interfaces for both the client trading app and the internal reporting console', 'Built both Angular front ends, including order history, the portfolio and cash views, light mode and the reporting UI', 'Designed and built Dua, the in-app assistant and guided tour', 'Wrote Vitest and Playwright tests and kept the Jenkins and SonarQube pipeline passing'] }),
       S('Problem Statement', 'A firm whose clients could only trade through a phone desk wanted a platform where they could sign in, place an order and see it in their holdings with no dealer involved. Without a person checking every trade, the platform itself has to catch mistakes, keep a record that holds up in a dispute, and still feel simple to someone who is not a professional trader.'),
     ),
     S('The Brief', 'The project started from a business requirements specification issued by the program sponsor. It set out 18 numbered requirements, each marked Must, Should or Could, and left the architecture and technology entirely up to the delivery team. The requirements fell into seven areas:',
